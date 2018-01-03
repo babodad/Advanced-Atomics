@@ -1,9 +1,9 @@
 {
-	"name": "Cheesecake",
+	"name": "Advanced-Atomics",
 	"version": "0.1",
-	"title": "Cheesecake",
+	"title": "Advanced Atomics",
 	"author": "madurban ++ drbert",
-	"description": "Cheesecake with U-235 topping",
+	"description": "Tools with U-235 topping",
 	"homepage": "http://127.0.0.1",
 	"contact": "http://127.0.0.1",
 	"factorio_version":"0.16",
