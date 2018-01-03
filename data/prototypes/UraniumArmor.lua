@@ -1,5 +1,15 @@
 data:extend{
 	{
+    type = "equipment-grid",
+    name = "larger-equipment-grid",
+    width = 14,
+    height = 14,
+    equipment_categories = {"armor"}
+  }
+}
+
+data:extend{
+	{
 		type = "armor",
 		name = "klaproth-armor",
 		--icon = "PATH",
@@ -32,7 +42,7 @@ data:extend{
 	subgroup = "armor",
 	order = "h(klaproth-armor)",
 	stack-size = 1,
-	--equipment_grid = "",
+	equipment_grid = "larger-equipment-grid",
 	inventory_size_bonus = 70
 	}
 }
