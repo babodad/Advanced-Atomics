@@ -4,7 +4,7 @@ data:extend({
 	{
 		type = "mining-tool",
 		name = "uranium-axe",
-		icon = "__Cheesecake__/graphics/icons/uranium-axe.png",
+		icon = "__Advanced-Atomics__/graphics/icons/uranium-axe.png",
 		icon_size = 32,
 		flags = {"goes-to-quickbar"},
 		action =

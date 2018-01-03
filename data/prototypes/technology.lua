@@ -5,7 +5,7 @@ data:extend(
 		type = "technology",
 		name = "uranium-tools",
 		icon_size = 128,
-		icon = "__Cheesecake__/graphics/technology/UraniumTools_128.png",
+		icon = "__Advanced-Atomics__/graphics/technology/UraniumTools_128.png",
 		effects = {
 			{
 				type = "unlock-recipe",
