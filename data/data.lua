@@ -2,5 +2,5 @@
 require ("libs.technology")
 
 --- Items
-require("prototypes.UraniumAxe.item")
-require("prototypes.UraniumArmor.item")
+require("prototypes.UraniumAxe")
+require("prototypes.UraniumArmor")
