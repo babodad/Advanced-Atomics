@@ -11,7 +11,7 @@ data:extend(
     {
     type = "armor",
     name = "uranium-armor",
-    icon = "__Advanced-Atomics__/graphics/icons/uranium-axe.png",
+    icon = "__Advanced-Atomics__/graphics/icons/uranium-armor.png",
     icon_size = 32,
     flags = {"goes-to-main-inventory"},
     resistances =

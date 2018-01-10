@@ -4,7 +4,7 @@ data:extend({
 	{
 		type = "mining-tool",
 		name = "uranium-axe",
-		icon = "__Advanced-Atomics__/graphics/icons/uranium-axe.png",
+		icon = "__Advanced-Atomics__/graphics/icons/uranium-axe-mk1.png",
 		icon_size = 32,
 		flags = {"goes-to-quickbar"},
 		action =
@@ -32,7 +32,6 @@ data:extend({
 		resource_reach_distance_bonus = 10
 	},	
   
-
   {
     type = "recipe",
     name = "uranium-axe",
@@ -46,11 +45,11 @@ data:extend({
     requester_paste_multiplier = 1
 	},  
 	
-	---- UraniumAxe Mark 2
+	---- UraniumAxe Mark II
 	{
 		type = "mining-tool",
 		name = "uranium-axe-mk2",
-		icon = "__Advanced-Atomics__/graphics/icons/uranium-axe.png",
+		icon = "__Advanced-Atomics__/graphics/icons/uranium-axe-mk2.png",
 		icon_size = 32,
 		flags = {"goes-to-quickbar"},
 		action =
