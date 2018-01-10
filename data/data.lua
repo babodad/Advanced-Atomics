@@ -1,5 +1,5 @@
 -- Technologies
-require ("libs.technology")
+require ("prototypes.technology")
 
 --- Items
 require("prototypes.UraniumAxe")
