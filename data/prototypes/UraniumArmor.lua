@@ -1,5 +1,13 @@
 data:extend(
 {
+	{
+    type = "equipment-grid",
+    name = "larger-equipment-grid",
+    width = 14,
+    height = 14,
+    equipment_categories = {"armor"}
+	},
+	
     {
     type = "armor",
     name = "uranium-armor",
@@ -33,8 +41,22 @@ data:extend(
     subgroup = "armor",
     order = "h[uranium-armor]",
     stack_size = 1,
-    equipment_grid = "large-equipment-grid",
+    equipment_grid = "larger-equipment-grid",
     inventory_size_bonus = 70
-  }
+  },
+  
+   {
+    type = "recipe",
+    name = "uranium-armor",
+    enabled = true,
+    ingredients =
+    {
+      {"steel-axe", 1},
+      {"uranium-238", 42}
+    },
+    result = "uranium-armor",
+    requester_paste_multiplier = 1
+	}
 }
 )
+
