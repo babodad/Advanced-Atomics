@@ -1,4 +1,4 @@
-data:extend{
+--[[data:extend{
 	{
     type = "equipment-grid",
     name = "larger-equipment-grid",
@@ -14,7 +14,7 @@ data:extend{
 		name = "uranium-armor",
 		--icon = "PATH",
 		icon_size = 32,
-		flags = {"goes-to-main-inventory"}
+		flags = {"goes-to-main-inventory"},
 		resistances =
     {
       {
@@ -42,7 +42,7 @@ data:extend{
 	subgroup = "armor",
 	order = "h(uranium-armor)",
 	stack-size = 1,
-	equipment_grid = "larger-equipment-grid",
+	--equipment_grid = "larger-equipment-grid",
 	inventory_size_bonus = 70
   },
   
@@ -101,4 +101,4 @@ data:extend{
     requester_paste_multiplier = 1
   }
 
-}
+} --]]

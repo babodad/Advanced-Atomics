@@ -5,10 +5,10 @@
 #----------------------------------------------------------------
 $mydocuments = [Environment]::GetFolderPath('MyDocuments')
 
-$source = "$mydocuments\github\advanced-atomics\data"
+$source = "$mydocuments\github\advanced-atomics\data\Advanced-Atomics"
 $info = Get-Content "$source\info.json" -Raw | ConvertFrom-Json
 
-$destination = "$mydocuments\github\advanced-atomics\bin\advanced-atomics_$($info.version).zip"
+$destination = "$mydocuments\github\advanced-atomics\bin\Advanced-Atomics_$($info.version).zip"
 $modfolder = "$env:APPDATA\factorio\mods\"
 
 If(Test-path $destination) {Remove-item $destination}

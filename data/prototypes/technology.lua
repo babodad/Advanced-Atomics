@@ -29,4 +29,4 @@ data:extend(
 
 })
 
-table.insert(data.raw["technology"]["atomic-bomb"].effects,{type="unlock-recipe",recipe="uranium-artillery-shell"})
+--table.insert(data.raw["technology"]["atomic-bomb"].effects,{type="unlock-recipe",recipe="uranium-artillery-shell"})
