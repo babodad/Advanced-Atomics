@@ -9,7 +9,7 @@ $modfolder = "$env:APPDATA\factorio\mods\"
 
 $info = Get-Content "$sourcedata\info.json" -Raw | ConvertFrom-Json
 $sourcedir = "$mydocuments\github\advanced-atomics\bin\Advanced-Atomics_$($info.version)"
-copy-item $sourcedata $sourcedir -Recurse -Force
+copy-item $sourcedata $sourcedir\Advanced-Atomics_$($info.version) -Recurse -Force
 
 $destination = "$sourcedir.zip"
 
@@ -19,5 +19,6 @@ Add-Type -assembly "system.io.compression.filesystem"
 
 Copy-Item $destination $modfolder
 
+#Burn after reading
 If(Test-path $destination) {Remove-item $destination}
 If(Test-path $sourcedir) {Remove-item -path $sourcedir -Recurse}
