@@ -22,7 +22,7 @@ data:extend({
 		},
 		durability = 6000,
 		subgroup = "tool",
-		order = "a[mining]-b[steel-axe]",---test: -c[uranium-axe]
+		order = "a[mining]-c[uranium-axe]",---test: -b[steel-axe]
 		speed = 6,
 		stack_size = 5,
 		build_distance_bonus = 8,
@@ -67,7 +67,7 @@ data:extend({
 		},
 		durability = 101010,
 		subgroup = "tool",
-		order = "a[mining]-b[steel-axe]",---test: -d[uranium-axe-mk2]
+		order = "a[mining]-d[uranium-axe-mk2]",---test: 
 		speed = 12,
 		stack_size = 5,
 		build_distance_bonus = 16,
@@ -113,7 +113,7 @@ data:extend({
 		},
 		durability = 101010,
 		subgroup = "tool",
-		order = "a[mining]-b[steel-axe]",---test: -d[uranium-axe-mk2]
+		order = "a[mining]-e[plutonium-axe]",---test: 
 		speed = 18,
 		stack_size = 5,
 		build_distance_bonus = 24,
