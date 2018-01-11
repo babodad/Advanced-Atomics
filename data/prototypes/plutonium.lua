@@ -14,7 +14,7 @@ data:extend(
     {
     type = "recipe",
     name = "plutonium-nucleosynthesis",
-    energy_required = 1000,
+    energy_required = 239,
     enabled = false,
     category = "centrifuging",
     ingredients = {{"uranium-238", 1}},

@@ -114,11 +114,11 @@ data:extend(
     energy_required = 120,
     ingredients =
     {
-      {"uranium-armor", 1},
-      --{"plutonium", 42},
+      {"uranium-armor", 1},      
       {"fusion-reactor-equipment", 2},
       {"processing-unit", 300},
-      {"low-density-structure", 200}
+      {"low-density-structure", 200},
+      {"plutonium-239", 42}
     },
     result = "plutonium-armor",
     requester_paste_multiplier = 1
