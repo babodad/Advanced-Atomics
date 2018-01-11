@@ -22,14 +22,14 @@ data:extend({
 		},
 		durability = 6000,
 		subgroup = "tool",
-		order = "a[mining]-b[steel-axe]",
+		order = "a[mining]-b[steel-axe]",---test: -c[uranium-axe]
 		speed = 6,
-		stack_size = 10,
-		build_distance_bonus = 10,
-		item_drop_distance_bonus = 10,
-		item_pickup_distance_bonus = 10,
-		loot_pickup_distance_bonus = 10,
-		resource_reach_distance_bonus = 10
+		stack_size = 5,
+		build_distance_bonus = 8,
+		item_drop_distance_bonus = 8,
+		item_pickup_distance_bonus = 8,
+		loot_pickup_distance_bonus = 8,
+		resource_reach_distance_bonus = 4
 	},	
   
   {
@@ -67,14 +67,14 @@ data:extend({
 		},
 		durability = 101010,
 		subgroup = "tool",
-		order = "a[mining]-b[steel-axe]",
-		speed = 10,
-		stack_size = 10,
-		build_distance_bonus = 20,
-		item_drop_distance_bonus = 20,
-		item_pickup_distance_bonus = 20,
-		loot_pickup_distance_bonus = 20,
-		resource_reach_distance_bonus = 20
+		order = "a[mining]-b[steel-axe]",---test: -d[uranium-axe-mk2]
+		speed = 12,
+		stack_size = 5,
+		build_distance_bonus = 16,
+		item_drop_distance_bonus = 16,
+		item_pickup_distance_bonus = 16,
+		loot_pickup_distance_bonus = 16,
+		resource_reach_distance_bonus = 8
 	},	
   
 
