@@ -4,10 +4,7 @@ require ("prototypes.technology")
 --- Items
 require("prototypes.UraniumAxe")
 require("prototypes.UraniumArmor")
-<<<<<<< HEAD
+require("prototypes.Plutonium")
 
 -- Player Animation (Armor)
 require ("prototypes.player")
-=======
-require("prototypes.Plutonium")
->>>>>>> origin/atomic_test
