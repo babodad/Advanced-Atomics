@@ -5,3 +5,4 @@ require ("prototypes.test")
 --- Items
 require("prototypes.UraniumAxe")
 require("prototypes.UraniumArmor")
+require("prototypes.Plutonium")
