@@ -44,18 +44,55 @@ data:extend(
 		},
 		prerequisites = {"nuclear-power", "power-armor-2", "military-4"},
 		unit = {
-			count = 200,
+			count = 500,
 			ingredients = 
 			{
 				{"science-pack-1", 1},
 				{"science-pack-2", 1},
 				{"science-pack-3", 2},
-				{"military-science-pack", 3},
-				{"high-tech-science-pack", 3}
+				{"military-science-pack", 2},
+				{"high-tech-science-pack", 2}
 			},
 			time = 42			
 		},
-		order = "e-a-a"
+		order = "g-c-c"
+	},
+	
+	--- Plutonium
+	{
+		type = "technology",
+		name = "plutonium",
+		icon_size = 128,
+		icon = "__Advanced-Atomics__/graphics/technology/Plutonium_128.png",
+		effects = {
+			{
+				type = "unlock-recipe",
+				recipe = "plutonium-nucleosynthesis"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "plutonium-armor"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "plutonium-axe"
+			}
+		},
+		prerequisites = {"kovarex-enrichment-process"},
+		unit = {
+			count = 1000,
+			ingredients = 
+			{
+				{"science-pack-1", 1},
+				{"science-pack-2", 1},
+				{"science-pack-3", 2},
+				{"military-science-pack", 2},
+				{"high-tech-science-pack", 2},
+				{"space-science-pack", 3}
+			},
+			time = 42			
+		},
+		order = "g-c-d"
 	}	
 })
 
