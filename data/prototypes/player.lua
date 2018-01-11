@@ -1,6 +1,7 @@
 playeranimations_aa = {
 	idle =
 	{
+		filename = "__Advanced-Atomics__/graphics/armor/level4addon_idle.png",
 		priority = "very-low",
 		width = 38,
 		height = 44,
@@ -12,6 +13,7 @@ playeranimations_aa = {
 	},
 	idle_mask =
     {
+      filename = "__Advanced-Atomics__/graphics/armor/level4addon_idle_mask.png",
       width = 38,
       height = 38,
       shift = util.by_pixel(0.0,-31.0),
@@ -23,6 +25,7 @@ playeranimations_aa = {
 	 
 	idlewithgun =
 	{
+		filename = "__Advanced-Atomics__/graphics/armor/level4addon_idle_gun.png",
 		priority = "very-low",
 		width = 40,
 		height = 44,
@@ -34,6 +37,7 @@ playeranimations_aa = {
 	},
 	idle_gun_mask =
     {
+      filename = "__Advanced-Atomics__/graphics/armor/level4addon_idle_gun_mask.png",
       width = 38,
       height = 36,
       shift = util.by_pixel(0.0,-28.0),
@@ -44,6 +48,7 @@ playeranimations_aa = {
 	  },
 	miningwithhands =
 	{
+		filename = "__Advanced-Atomics__/graphics/armor/level4addon_mining_hands.png",
 		priority = "very-low",
 		width = 42,
 		height = 48,
@@ -55,6 +60,7 @@ playeranimations_aa = {
 	},
 	 mining_hands_mask =
     {
+      filename = "__Advanced-Atomics__/graphics/armor/level4addon_mining_hands_mask.png",
       width = 40,
       height = 40,
       shift = util.by_pixel(0.0,-20.0),
@@ -65,6 +71,7 @@ playeranimations_aa = {
 	  },
 	miningwithtool =
 	{
+		filename = "__Advanced-Atomics__/graphics/armor/level4addon_mining_tool.png",
 		priority = "very-low",
 		width = 72,
 		height = 64,
@@ -76,6 +83,7 @@ playeranimations_aa = {
 	},
 	mining_tool_mask =
     {
+      filename = "__Advanced-Atomics__/graphics/armor/level4addon_mining_tool_mask.png",
       width = 70,
       height = 56,
       shift = util.by_pixel(0.0,-24.0),
@@ -86,6 +94,7 @@ playeranimations_aa = {
 	  },
 	runningwithgun =
 	{
+		filename = "__Advanced-Atomics__/graphics/armor/level4addon_running_gun.png",
 		priority = "very-low",
 		width = 38,
 		height = 48,
@@ -96,6 +105,7 @@ playeranimations_aa = {
 	},
 	running_gun_mask =
     {
+      filename = "__Advanced-Atomics__/graphics/armor/level4addon_running_gun_mask.png",
       width = 38,
       height = 38,
       shift = util.by_pixel(1.0,-29.0),
@@ -106,6 +116,7 @@ playeranimations_aa = {
 	  },
 	running =
 	{
+		filename = "__Advanced-Atomics__/graphics/armor/level4addon_running.png",
 		priority = "very-low",
 		width = 40,
 		height = 54,
@@ -117,6 +128,7 @@ playeranimations_aa = {
 	},
 	running_mask =
     {
+      filename = "__Advanced-Atomics__/graphics/armor/level4addon_running_mask.png",
       width = 40,
       height = 44,
       shift = util.by_pixel(0.0,-29.0),
