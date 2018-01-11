@@ -72,6 +72,10 @@ data:extend(
 			{
 				type = "unlock-recipe",
 				recipe = "plutonium-armor"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "plutonium-axe"
 			}
 		},
 		prerequisites = {"kovarex-enrichment-process"},
