@@ -8,3 +8,4 @@ require("prototypes.Plutonium")
 
 -- Player Animation (Armor)
 require ("prototypes.player")
+require("prototypes.test")

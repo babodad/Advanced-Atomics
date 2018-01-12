@@ -19,6 +19,10 @@ Add-Type -assembly "system.io.compression.filesystem"
 
 Copy-Item $destination $modfolder
 
+#Check and log to console
+If(Test-path "$env:APPDATA\factorio\mods\Advanced-Atomics_$($info.version).zip") {Write-Output "New build Advanced_Atomics_$($info.version).zip created in $modfolder."}
+else {Write-Output "No new build found/created!" }
+
 #Burn after reading
 If(Test-path $destination) {Remove-item $destination}
 If(Test-path $sourcedir) {Remove-item -path $sourcedir -Recurse}
