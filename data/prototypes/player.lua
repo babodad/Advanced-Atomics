@@ -1,7 +1,7 @@
 playeranimations_aa = {
 	dead =
     {
-      filename = "__Advanced-Atomics__/graphics/armor/level4_dead.png",
+      filename = "__Advanced-Atomics__/graphics/armor/level4addon_dead.png",
       width = 58,
       height = 58,
       shift = util.by_pixel(-7.0,-5.0),
@@ -9,7 +9,7 @@ playeranimations_aa = {
 	},
 	dead_mask =
     {
-      filename = "__Advanced-Atomics__/graphics/armor/level4_dead_mask.png",
+      filename = "__Advanced-Atomics__/graphics/armor/level4addon_dead_mask.png",
       width = 46,
       height = 36,
       shift = util.by_pixel(-2.0,-6.0),
@@ -157,23 +157,22 @@ playeranimations_aa = {
 }
 
 data.raw["character-corpse"]["character-corpse"].level4addon = {
-	armors = {"uranium-armor"},
 		{
 			armor_picture_mapping = 
 			{
-				["uranium-armor"] = 4
+				["uranium-armor"] = 4 or nil
 			},
 
 			pictures = {
-				{
+				
 				layers = {
 					playeranimations.level1.dead,
-					playeranimations.level1.dead_mask,
-					playeranimations_aa.level4_dead,
-					playeranimations_aa.level4_dead_mask,
+					--playeranimations.level1.dead_mask,
+					playeranimations_aa.dead,
+					--playeranimations_aa.dead_mask,
 					playeranimations.level1.dead_shadow
 				}
-			}
+			
 			}
 		}
 	}
