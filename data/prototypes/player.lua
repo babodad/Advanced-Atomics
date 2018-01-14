@@ -169,7 +169,7 @@ data.raw["character-corpse"]["character-corpse"].level4addon = {
 					playeranimations.level1.dead,
 					--playeranimations.level1.dead_mask,
 					playeranimations_aa.dead,
-					--playeranimations_aa.dead_mask,
+					playeranimations_aa.dead_mask,
 					playeranimations.level1.dead_shadow
 				}
 			
