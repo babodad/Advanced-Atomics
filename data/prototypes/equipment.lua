@@ -5,7 +5,7 @@ data:extend(
   {
   type = "item",
   name = "uranium-shield-equipment",
-  icon = "__Advanced-Atomics__/graphics/icons/uranium-shield-equipment.png",
+  icon = "__Advanced-Atomics__/graphics/icons/uranium-shield.png",
   placed_as_equipment_result = "uranium-shield-equipment",
   flags = {"goes-to-main-inventory"},
   subgroup = "equipment",
@@ -45,7 +45,7 @@ data:extend(
   {
     type = "item",
     name = "plutonium-shield-equipment",
-    icon = "__Advanced-Atomics__/graphics/icons/plutonium-shield-equipment.png",
+    icon = "__Advanced-Atomics__/graphics/icons/plutonium-shield.png",
     placed_as_equipment_result = "plutonium-shield-equipment",
     flags = {"goes-to-main-inventory"},
     subgroup = "equipment",
@@ -122,9 +122,3 @@ data:extend(
   }
 }
 )
-data:extend{
-  
-  
-
-  
-}  
