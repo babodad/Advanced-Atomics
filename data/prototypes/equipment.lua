@@ -67,7 +67,7 @@ data:extend(
     placed_as_equipment_result = "plutonium-shield-equipment",
     flags = {"goes-to-main-inventory"},
     subgroup = "equipment",
-    order = "b[shield]-c[plutonium-shield-equipment]",
+    order = "b[shield]-d[plutonium-shield-equipment]",
     stack_size = 50,
     default_request_amount = 10
    },
@@ -87,15 +87,15 @@ data:extend(
         height = 3,
         type = "full"
       },
-      max_shield_value = 400,
+      max_shield_value = 500,
       energy_source =
       {
         type = "electric",
-        buffer_capacity = "480kJ",
-        input_flow_limit = "500kW",
+        buffer_capacity = "600kJ",
+        input_flow_limit = "800kW",
         usage_priority = "primary-input"
       },
-      energy_per_shield = "80kJ",
+      energy_per_shield = "100kJ",
       categories = {"armor"}
     },
 
@@ -153,7 +153,6 @@ data:extend(
       usage_priority = "terciary"
     },
     categories = {"armor"}
-<<<<<<< HEAD
   },
 
   {
