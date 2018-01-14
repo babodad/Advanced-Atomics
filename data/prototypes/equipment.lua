@@ -13,7 +13,8 @@ data:extend(
   order = "b[shield]-c[uranium-shield-equipment]",
   stack_size = 50,
   default_request_amount = 10
- },
+  },
+
    {
     type = "energy-shield-equipment",
     name = "uranium-shield-equipment",
@@ -40,6 +41,21 @@ data:extend(
     },
     energy_per_shield = "80kJ",
     categories = {"armor"}
+  },
+
+  {
+    type = "recipe",
+    name = "uranium-shield-equipment",
+    enabled = false,
+    energy_required = 10,
+    ingredients =
+    {
+      {"energy-shield-mk2-equipment", 10},
+	    {"advanced-circuit", 40},
+      {"processing-unit", 20},
+      {"uranium-235", 10}
+    },
+    result = "uranium-shield-equipment"
   },
 
   --- Plutonium Shield
@@ -83,6 +99,21 @@ data:extend(
       categories = {"armor"}
     },
 
+    {
+      type = "recipe",
+      name = "plutonium-shield-equipment",
+      enabled = false,
+      energy_required = 10,
+      ingredients =
+      {
+        {"uranium-shield-equipment", 10},
+        {"advanced-circuit", 40},
+        {"processing-unit", 20},
+        {"plutonium-239", 10}
+      },
+      result = "plutonium-shield-equipment"
+    },
+
   --- Plutonium Battery
   {
     type = "item",
@@ -122,6 +153,22 @@ data:extend(
       usage_priority = "terciary"
     },
     categories = {"armor"}
-  }
-}
-)
+  },
+
+  {
+    type = "recipe",
+    name = "radionuclide-battery-equipment",
+    enabled = false,
+    energy_required = 10,
+    ingredients =
+    {
+	    {"steel-plate", 30},
+      {"advanced-circuit", 40},
+      {"processing-unit", 30},
+      {"plutonium-239", 20}
+    },
+    result = "radionuclide-battery-equipment"
+  },
+
+
+})

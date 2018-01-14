@@ -40,6 +40,10 @@ data:extend(
 			{
 				type = "unlock-recipe",
 				recipe = "uranium-armor"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "uranium-shield-equipment"
 			}
 		},
 		prerequisites = {"nuclear-power", "power-armor-2", "military-4"},
@@ -71,11 +75,19 @@ data:extend(
 			},
 			{
 				type = "unlock-recipe",
+				recipe = "plutonium-axe"
+			},
+			{
+				type = "unlock-recipe",
 				recipe = "plutonium-armor"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "plutonium-axe"
+				recipe = "plutonium-shield-equipment"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "radionuclide-battery-equipment"
 			}
 		},
 		prerequisites = {"kovarex-enrichment-process"},
