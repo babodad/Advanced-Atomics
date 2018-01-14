@@ -153,7 +153,7 @@ data:extend(
       usage_priority = "terciary"
     },
     categories = {"armor"}
-<<<<<<< HEAD
+
   },
 
   {
