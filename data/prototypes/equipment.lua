@@ -171,14 +171,5 @@ data:extend(
     result = "radionuclide-battery-equipment"
   },
 
-
 })
-=======
-  }
-}
-)
-data:extend{
-  
-  
-}  
->>>>>>> 4011411e91e13eb545a3378379a040495622d97b
+
