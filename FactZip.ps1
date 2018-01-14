@@ -26,9 +26,3 @@ else {Write-Output "No new build found/created!" }
 #Burn after reading
 If(Test-path $destination) {Remove-item $destination}
 If(Test-path $sourcedir) {Remove-item -path $sourcedir -Recurse}
-
-#Run Factorio
-$steamPath = "$((Get-ItemProperty HKCU:\Software\Valve\Steam\).SteamPath)".Replace('/','\')
-
-If($env:computername.contains("HAL")) {& "D:\Games\SteamLibrary\steamapps\common\Factorio\bin\x64\factorio.exe"}
-else {& $steamPath + "\steamapps\common\Factorio\bin\x64\factorio.exe"}

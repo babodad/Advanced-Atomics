@@ -5,7 +5,8 @@ data:extend(
   {
   type = "item",
   name = "uranium-shield-equipment",
-  icon = "__Advanced-Atomics__/graphics/icons/uranium-shield-equipment.png",
+  icon = "__Advanced-Atomics__/graphics/icons/uranium-shield.png",
+  icon_size = 32,
   placed_as_equipment_result = "uranium-shield-equipment",
   flags = {"goes-to-main-inventory"},
   subgroup = "equipment",
@@ -45,7 +46,8 @@ data:extend(
   {
     type = "item",
     name = "plutonium-shield-equipment",
-    icon = "__Advanced-Atomics__/graphics/icons/plutonium-shield-equipment.png",
+    icon = "__Advanced-Atomics__/graphics/icons/plutonium-shield.png",
+    icon_size = 32,
     placed_as_equipment_result = "plutonium-shield-equipment",
     flags = {"goes-to-main-inventory"},
     subgroup = "equipment",
@@ -84,9 +86,10 @@ data:extend(
   --- Plutonium Battery
   {
     type = "item",
-    name = "radionuclide-battery",
+    name = "radionuclide-battery-equipment",
     icon = "__Advanced-Atomics__/graphics/icons/radionuclide-battery.png",
-    placed_as_equipment_result = "radionuclide-battery",
+    icon_size = 32,
+    placed_as_equipment_result = "radionuclide-battery-equipment",
     flags = {"goes-to-main-inventory"},
     subgroup = "equipment",
     order = "c[battery]-c[radionuclide-battery]",
@@ -122,7 +125,10 @@ data:extend(
   }
 }
 )
+<<<<<<< HEAD
 data:extend{
   
   
 }  
+=======
+>>>>>>> origin/atomic_test
