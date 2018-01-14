@@ -125,10 +125,7 @@ data:extend(
   }
 }
 )
-<<<<<<< HEAD
 data:extend{
   
   
 }  
-=======
->>>>>>> origin/atomic_test
