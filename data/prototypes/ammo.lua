@@ -30,7 +30,7 @@ data:extend(
 		  },
 		},
 		subgroup = "ammo",
-		order = "d[explosive-cannon-shell]-d[artillery]",
+		order = "d[explosive-cannon-shell]-d[artillery]y",
 		stack_size = 1
 	},
 
@@ -78,7 +78,7 @@ data:extend(
 			},
 		},
 		subgroup = "ammo",
-		order = "d[explosive-cannon-shell]-d[artillery]",
+		order = "d[explosive-cannon-shell]-d[artillery]z",
 		stack_size = 1
 	},
 
@@ -89,7 +89,7 @@ data:extend(
 		energy_required = 120,
 		ingredients =
 		{
-			{"atomic-bomb", 1},
+			{"plutonium-239", 42},
 			{"nuclear-fuel", 10},
 			{"rocket-control-unit", 10},
 			{"radar", 1}
