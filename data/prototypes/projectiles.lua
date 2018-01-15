@@ -11,7 +11,7 @@ data:extend(
 		map_color = {r=1, g=1, b=0},
 		picture =
 		{
-			filename = "__Advanced-Atomics__/graphics/entity/artillery-projectile/hr-atomic-shell.png",
+			filename = "__Advanced-Atomics__/graphics/entity/artillery-projectile/hr-uranium-shell.png",
 			width = 64,
 			height = 64,
 			scale = 0.5,
@@ -25,7 +25,7 @@ data:extend(
 		},
 		chart_picture =
 		{
-			filename = "__Advanced-Atomics__/graphics/entity/artillery-projectile/atomic-artillery-shoot-map-visualization.png",
+			filename = "__Advanced-Atomics__/graphics/entity/artillery-projectile/uranium-artillery-shoot-map-visualization.png",
 			flags = { "icon" },
 			frame_count = 1,
 			width = 64,

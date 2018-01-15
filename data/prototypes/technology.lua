@@ -92,6 +92,10 @@ data:extend(
 			{
 				type = "unlock-recipe",
 				recipe = "radionuclide-battery-equipment"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "plutonium-artillery-shell"
 			}
 		},
 		prerequisites = {"kovarex-enrichment-process"},
@@ -112,4 +116,4 @@ data:extend(
 	}	
 })
 
---table.insert(data.raw["technology"]["atomic-bomb"].effects,{type="unlock-recipe",recipe="uranium-artillery-shell"})
+table.insert(data.raw["technology"]["uranium-ammo"].effects,{type="unlock-recipe",recipe="uranium-artillery-shell"})
