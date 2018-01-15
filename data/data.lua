@@ -6,6 +6,7 @@ require("prototypes.UraniumAxe")
 require("prototypes.UraniumArmor")
 require("prototypes.Plutonium")
 require("prototypes.projectiles")
+require("prototypes.ammo")
 
 --- Equipment
 require("prototypes.equipment")

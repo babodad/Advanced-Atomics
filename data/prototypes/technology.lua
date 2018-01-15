@@ -9,6 +9,10 @@ data:extend(
 		effects = {
 			{
 				type = "unlock-recipe",
+				recipe = "uranium-artillery-shell"
+			},
+			{
+				type = "unlock-recipe",
 				recipe = "uranium-axe"
 			},
 			{
