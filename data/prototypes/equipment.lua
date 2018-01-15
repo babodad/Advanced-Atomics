@@ -153,10 +153,6 @@ data:extend(
       usage_priority = "terciary"
     },
     categories = {"armor"}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/atomic_test
   },
 
   {

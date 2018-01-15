@@ -31,10 +31,7 @@ data:extend(
 		subgroup = "ammo",
 		order = "d[explosive-cannon-shell]-d[artillery]",
 		stack_size = 1
-	}
-}
-
-{
+	},
 	{
 		type = "recipe",
 		name = "uranium-artillery-shell",
@@ -50,5 +47,4 @@ data:extend(
 		result = "uranium-artillery-shell"
 	}
 }
-
 )
