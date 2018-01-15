@@ -9,6 +9,10 @@ data:extend(
 		effects = {
 			{
 				type = "unlock-recipe",
+				recipe = "uranium-artillery-shell"
+			},
+			{
+				type = "unlock-recipe",
 				recipe = "uranium-axe"
 			},
 			{
@@ -37,10 +41,6 @@ data:extend(
 		icon_size = 128,
 		icon = "__Advanced-Atomics__/graphics/technology/UraniumArmor_128.png",
 		effects = {
-			{
-				type = "unlock-recipe",
-				recipe = "uranium-artillery-shell"
-			},
 			{
 				type = "unlock-recipe",
 				recipe = "uranium-armor"
