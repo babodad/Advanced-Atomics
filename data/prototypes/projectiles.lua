@@ -174,6 +174,11 @@ data:extend(
 						damage = {amount = 500, type = "explosion"}
 					},
 					{
+						type = "destroy-cliffs",
+						radius = 20,
+						explosion = "explosion"
+					},
+					{
 						type = "create-entity",
 						entity_name = "small-scorchmark",
 						check_buildability = true

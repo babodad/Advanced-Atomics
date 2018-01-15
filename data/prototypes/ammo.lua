@@ -90,8 +90,8 @@ data:extend(
 		ingredients =
 		{
 			{"atomic-bomb", 1},
-			{"explosive-uranium-cannon-shell", 4},
-			{"rocket-control-unit", 3},
+			{"nuclear-fuel", 10},
+			{"rocket-control-unit", 10},
 			{"radar", 1}
 		},
 		result = "plutonium-artillery-shell"
