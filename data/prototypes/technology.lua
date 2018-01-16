@@ -65,7 +65,11 @@ data:extend(
 		},
 		order = "g-c-c"
 	},
-	
+})
+
+if AA.ENABLED["Plutonium"] then
+data:extend(
+{
 	--- Plutonium
 	{
 		type = "technology",
@@ -113,7 +117,9 @@ data:extend(
 			time = 42			
 		},
 		order = "g-c-d"
-	}	
+	},
+	
 })
+end
 
 table.insert(data.raw["technology"]["uranium-ammo"].effects,{type="unlock-recipe",recipe="uranium-artillery-shell"})

@@ -58,6 +58,11 @@ data:extend(
     result = "uranium-shield-equipment"
   },
 
+})
+
+if AA.ENABLED["Plutonium"] then
+data:extend(
+{
   --- Plutonium Shield
   {
     type = "item",
@@ -169,6 +174,9 @@ data:extend(
     },
     result = "radionuclide-battery-equipment"
   },
-
+  
 })
+end
+
+
 

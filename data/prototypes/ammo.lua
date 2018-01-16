@@ -48,6 +48,11 @@ data:extend(
 		result = "uranium-artillery-shell"
 	},
 
+})
+
+if AA.ENABLED["Plutonium"] then
+data:extend(
+{
 	--- Plutonium Shell
 	{
 		type = "ammo",
@@ -98,3 +103,6 @@ data:extend(
 	}
 
 })
+end
+
+

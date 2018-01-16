@@ -110,7 +110,12 @@ data:extend(
 			priority = "high"
 		},
 	},
-	
+
+})
+
+if AA.ENABLED["Plutonium"] then
+data:extend(
+{
 	--- Plutonium Projectile
 	{
 		type = "artillery-projectile",
@@ -279,5 +284,5 @@ data:extend(
 			priority = "high"
 		}
 	},
-}
-)
+})
+end
