@@ -43,6 +43,7 @@ data:extend(
 		{
 			{"explosive-uranium-cannon-shell", 5},
 			{"explosives", 10},
+			{"plastic-bar", 2},
 			{"radar", 1}
 		},
 		result = "uranium-artillery-shell"
