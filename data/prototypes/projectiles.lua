@@ -60,6 +60,11 @@ data:extend(
 						type = "damage",
 						damage = {amount = 500 , type = "explosion"}
 						},
+						{
+							type = "destroy-cliffs",
+							radius = 5.0,
+							explosion = "explosion"
+						},
 					}
 					}
 				}
@@ -286,3 +291,4 @@ data:extend(
 	},
 })
 end
+
