@@ -71,3 +71,13 @@ data:extend(
 
 })
 
+for _, animation in ipairs(data.raw["player"]["player"]["animations"]) do
+  if animation.armors then
+    for _, armor in ipairs(animation.armors) do
+      if armor == "power-armor-mk2" then
+        animation.armors[#animation.armors + 1] = "uranium-armor"
+        break
+      end
+    end
+  end
+end
