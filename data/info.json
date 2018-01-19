@@ -2,10 +2,9 @@
 	"name": "Advanced-Atomics",
 	"version": "0.1.0",
 	"title": "Advanced Atomics",
-	"author": "",
-	"description": "",
-	"homepage": "",
-	"contact": "",
+	"author": "drbert & madurban",
+	"contributor": "1nf0", 
+	"description": "Advanced Atomics provides you with improved versions of mining tools, armor, equipment and artillery shells. Every recipe requires Uranium or Plutonium-239, which can be synthesized aftere exploring the appropriate late-game technology.",
 	"factorio_version":"0.16",
 	"dependencies": ["base >= 0.16.8"]
 }
