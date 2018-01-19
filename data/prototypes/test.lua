@@ -12,7 +12,7 @@ playeranimations_aa = {
       filename = "__Advanced-Atomics__/graphics/armor/level4addon_dead_mask.png",
       width = 46,
       height = 36,
-      shift = util.by_pixel(-2.0,-6.0),
+      shift = util.by_pixel(-3.0,-6.0),
       frame_count = 2,
 	  apply_runtime_tint = true,
 	},
@@ -184,10 +184,10 @@ data.raw.player.player.animations.level4addon = {
 	{
 		layers =
 		{
-			playeranimations.level1.idle,
-            playeranimations.level1.idle_mask,
+			--playeranimations.level1.idle,
+            --playeranimations.level1.idle_mask,
 			playeranimations_aa.idle,
-			playeranimations_aa.idle_mask,
+			--playeranimations_aa.idle_mask,
 			playeranimations.level1.idle_shadow,
 		}
 	},
