@@ -26,8 +26,8 @@ playeranimations_aa = {
 		direction_count = 8,
 		frame_count = 22,
 		animation_speed = 0.15,
-		shift = util.by_pixel(0.1, -20.0), 
-		--axially_symmetrical = false
+		shift = util.by_pixel(-50.0, -0.0), 
+		axially_symmetrical = false
 	},
 	idle_mask =
     {
