@@ -20,12 +20,13 @@ playeranimations_aa = {
 	{
 		filename = "__Advanced-Atomics__/graphics/armor/level4addon_idle.png",
 		priority = "very-low",
-		width = 8,
-		height = 65,
+		width = 93,
+		height = 75,
+		scale = 0.9,
 		direction_count = 8,
 		frame_count = 22,
 		animation_speed = 0.15,
-		shift = util.by_pixel(0.0, 0.0), --28
+		shift = util.by_pixel(0.1, -20.0), 
 		--axially_symmetrical = false
 	},
 	idle_mask =
@@ -186,7 +187,7 @@ data.raw.player.player.animations.level4addon = {
 			playeranimations.level1.idle,
             playeranimations.level1.idle_mask,
 			playeranimations_aa.idle,
-			--playeranimations_aa.idle_mask,
+			playeranimations_aa.idle_mask,
 			playeranimations.level1.idle_shadow,
 		}
 	},
