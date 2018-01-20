@@ -5,7 +5,7 @@ data:extend(
 		type = "technology",
 		name = "uranium-tools",
 		icon_size = 128,
-		icon = "__Advanced-Atomics__/graphics/technology/UraniumTools_128.png",
+		icon = "__Advanced-Atomics__/graphics/technology/uranium-tools_128.png",
 		effects = {
 			{
 				type = "unlock-recipe",
@@ -39,7 +39,7 @@ data:extend(
 		type = "technology",
 		name = "uranium-armor",
 		icon_size = 128,
-		icon = "__Advanced-Atomics__/graphics/technology/UraniumArmor_128.png",
+		icon = "__Advanced-Atomics__/graphics/technology/uranium-armor_128.png",
 		effects = {
 			{
 				type = "unlock-recipe",
@@ -75,7 +75,7 @@ data:extend(
 		type = "technology",
 		name = "plutonium",
 		icon_size = 128,
-		icon = "__Advanced-Atomics__/graphics/technology/Plutonium_128.png",
+		icon = "__Advanced-Atomics__/graphics/technology/plutonium_128.png",
 		effects = {
 			{
 				type = "unlock-recipe",

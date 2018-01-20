@@ -10,12 +10,12 @@ AA.ENABLED = {
 require ("prototypes.technology")
 
 --- Items
-require("prototypes.UraniumAxe")
-require("prototypes.UraniumArmor")
+require("prototypes.uranium-axe")
+require("prototypes.uranium-armor")
 if AA.ENABLED["Plutonium"] then
-    require("prototypes.Plutonium")
-    require("prototypes.PlutoniumArmor")
-    require("prototypes.PlutoniumAxe")
+    require("prototypes.plutonium")
+    require("prototypes.plutonium-armor")
+    require("prototypes.plutonium-axe")
 end
 require("prototypes.projectiles")
 require("prototypes.ammo")
