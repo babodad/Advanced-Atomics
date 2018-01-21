@@ -49,6 +49,59 @@ data:extend(
 		result = "uranium-artillery-shell"
 	},
 
+	-- Uranium Grenade
+
+	{
+    type = "capsule",
+    name = "uranium-grenade",
+    icon = "__Advanced-Atomics__/graphics/icons/uranium-grenade.png",
+    icon_size = 32,
+    flags = {"goes-to-quickbar"},
+    capsule_action =
+    {
+      type = "throw",
+      attack_parameters =
+      {
+        type = "projectile",
+        ammo_category = "grenade",
+        cooldown = 20,
+        projectile_creation_distance = 0.6,
+        range = 25,
+        ammo_type =
+        {
+          category = "grenade",
+          target_type = "position",
+          action =
+          {
+            type = "direct",
+            action_delivery =
+            {
+              type = "projectile",
+              projectile = "uranium-grenade",
+              starting_speed = 0.3
+            }
+          }
+        }
+      }
+    },
+    subgroup = "capsule",
+    order = "b[-uranium-grenade]-a[normal]",
+    stack_size = 100
+	},
+	{
+    type = "recipe",
+    name = "-uranium-grenade",
+    enabled = true,
+    energy_required = 8,
+    ingredients =
+    {
+			{"grenade", 10},
+      {"steel-plate", 5},			
+			{"uranium-238", 2},
+    },
+    result = "uranium-grenade"
+  },
+
 	--- uranium shotgun
 	{
 		type = "ammo",
@@ -164,7 +217,7 @@ data:extend(
 		result = "plutonium-artillery-shell"
 	},
 
-	---plutonium-missile
+	---Plutonium missile
 	{
 		type = "ammo",
 		name = "plutonium-missile",
