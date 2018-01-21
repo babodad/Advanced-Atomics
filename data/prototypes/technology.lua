@@ -9,10 +9,6 @@ data:extend(
 		effects = {
 			{
 				type = "unlock-recipe",
-				recipe = "uranium-artillery-shell"
-			},
-			{
-				type = "unlock-recipe",
 				recipe = "uranium-axe"
 			},
 			{
@@ -37,7 +33,7 @@ data:extend(
 	--- Uranium Armor
 	{
 		type = "technology",
-		name = "uranium-armor",
+		name = "uranium-warfare",
 		icon_size = 128,
 		icon = "__Advanced-Atomics__/graphics/technology/uranium-armor_128.png",
 		effects = {
@@ -48,7 +44,7 @@ data:extend(
 			{
 				type = "unlock-recipe",
 				recipe = "uranium-shield-equipment"
-			}
+			},			
 		},
 		prerequisites = {"nuclear-power", "power-armor-2", "military-4"},
 		unit = {
@@ -100,6 +96,10 @@ data:extend(
 			{
 				type = "unlock-recipe",
 				recipe = "plutonium-artillery-shell"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "plutonium-missile"
 			}
 		},
 		prerequisites = {"kovarex-enrichment-process"},
@@ -122,4 +122,15 @@ data:extend(
 })
 end
 
-table.insert(data.raw["technology"]["uranium-ammo"].effects,{type="unlock-recipe",recipe="uranium-artillery-shell"})
+table.insert(data.raw["technology"]["uranium-ammo"].effects,
+	{
+		type = "unlock-recipe",
+		recipe = "uranium-artillery-shell"
+	}
+)
+table.insert(data.raw["technology"]["uranium-ammo"].effects,
+	{
+		type = "unlock-recipe",
+		recipe = "uranium-shotgun-shell"
+	}
+)

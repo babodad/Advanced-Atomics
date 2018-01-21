@@ -14,10 +14,10 @@ data:extend(
     {
     type = "recipe",
     name = "plutonium-nucleosynthesis",
-    energy_required = 239,
+    energy_required = 42,
     enabled = false,
     category = "centrifuging",
-    ingredients = {{"uranium-238", 1}},
+    ingredients = {{"uranium-235", 42}, {"uranium-238", 5}},
     icon = "__Advanced-Atomics__/graphics/icons/plutonium-processing.png",
     icon_size = 32,
     subgroup = "intermediate-product",
@@ -28,13 +28,18 @@ data:extend(
     {
       {
         name = "plutonium-239",
-        probability = 0.9,
-        amount = 1
+        probability = 0.4,
+        amount = 5
+      },
+      {
+        name = "uranium-238",
+        probability = 0.6,
+        amount = 5
       },
       {
         name = "uranium-235",
-        probability = 0.1,
-        amount = 1
+        probability = 0.999,
+        amount = 10
       }
     }
   }

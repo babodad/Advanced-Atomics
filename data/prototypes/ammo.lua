@@ -49,6 +49,68 @@ data:extend(
 		result = "uranium-artillery-shell"
 	},
 
+	--- uranium shotgun
+	{
+		type = "ammo",
+		name = "uranium-shotgun-shell",
+		icon = "__Advanced-Atomics__/graphics/icons/uranium-shotgun-shell.png",
+		icon_size = 32,
+		flags = {"goes-to-main-inventory"},
+		ammo_type =
+		{
+		  category = "shotgun-shell",
+		  target_type = "direction",
+		  clamp_position = true,
+		  action =
+		  {
+			{
+			  type = "direct",
+			  action_delivery =
+			  {
+				type = "instant",
+				source_effects =
+				{
+				  {
+					type = "create-explosion",
+					entity_name = "explosion-gunshot"
+				  }
+				}
+			  }
+			},
+			{
+			  type = "direct",
+			  repeat_count = 16,
+			  action_delivery =
+			  {
+				type = "projectile",
+				projectile = "uranium-shotgun-pellet",
+				starting_speed = 1.2,
+				direction_deviation = 0.3,
+				range_deviation = 0.3,
+				max_range = 18,
+			  }
+			}
+		  }
+		},
+		magazine_size = 10,
+		subgroup = "ammo",
+		order = "b[shotgun]-c[uranium]",
+		stack_size = 200
+	  },
+
+	  {
+		type = "recipe",
+		name = "uranium-shotgun-shell",
+		enabled = false,
+		energy_required = 10,
+		ingredients =
+		{
+		  {"shotgun-shell", 2},
+		  {"uranium-238", 5},
+		  {"steel-plate", 2}
+		},
+		result = "uranium-shotgun-shell"
+	  },
 })
 
 if AA.ENABLED["Plutonium"] then
@@ -101,8 +163,56 @@ data:extend(
 			{"radar", 1}
 		},
 		result = "plutonium-artillery-shell"
-	}
+	},
 
+	---plutonium-missile
+	{
+		type = "ammo",
+		name = "plutonium-missile",
+		icon = "__Advanced-Atomics__/graphics/icons/plutonium-missile.png",
+		icon_size = 32,
+		flags = {"goes-to-main-inventory"},
+		ammo_type =
+		{
+		  range_modifier = 6,
+		  cooldown_modifier = 2,
+		  target_type = "position",
+		  category = "rocket",
+		  action =
+		  {
+			type = "direct",
+			action_delivery =
+			{
+			  type = "projectile",
+			  projectile = "atomic-rocket",
+			  starting_speed = 0.08,
+			  source_effects =
+			  {
+				type = "create-entity",
+				entity_name = "explosion-hit"
+			  }
+			}
+		  }
+		},
+		subgroup = "ammo",
+		order = "d[rocket-launcher]-c[atomic-bomb]z",
+		stack_size = 25
+	  },
+
+	  {
+		type = "recipe",
+		name = "plutonium-missile",
+		enabled = false,
+		energy_required = 42,
+		ingredients =
+		{
+		  {"processing-unit", 20},
+		  {"explosives", 10},
+		  {"plutonium-239", 20}
+		},
+		result = "plutonium-missile"
+	  },
+	  
 })
 end
 

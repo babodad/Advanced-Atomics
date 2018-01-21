@@ -19,12 +19,10 @@ $buildname = "$($info.name)_$($info.version)"
 $sourcedir = "$tempdir\$buildname"
 copy-item $datadir $sourcedir -Recurse -Force
 
-
-
 if (test-path $7zdir) {
     set-alias 7z $7zdir  
-    7z a -mx=9 "$tempdir\$outputname.zip" "$tempdir\$buildname"
-    Copy-Item "$sourcedir.zip" .\bin
+    7z a -mx=9 "$sourcedir.zip" "$tempdir\$buildname"
+    Copy-Item "$sourcedir.zip" $bindir
 }
 else {
     Write-Waring "Could not locate $7zdir - Using native compression.. - Use only for local test!"
@@ -35,7 +33,7 @@ else {
 Copy-Item "$sourcedir.zip" $modfolder
 
 #Check and log to console
-if(Test-path "$modfolder\$outputname.zip") {Write-Output "New build $buildname created in $modfolder."}
+if(Test-path "$modfolder\$buildname.zip") {Write-Output "New build $buildname created in $modfolder."}
 else {Write-Output "No new build found/created!" }
 
 #Burn after reading
