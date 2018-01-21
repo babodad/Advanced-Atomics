@@ -113,7 +113,6 @@ data:extend(
 	  },
 })
 
-if AA.ENABLED["Plutonium"] then
 data:extend(
 {
 	--- Plutonium Shell
@@ -214,6 +213,5 @@ data:extend(
 	  },
 	  
 })
-end
 
 

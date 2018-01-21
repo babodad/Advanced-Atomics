@@ -60,7 +60,6 @@ data:extend(
 
 })
 
-if AA.ENABLED["Plutonium"] then
 data:extend(
 {
   --- Plutonium Shield
@@ -176,7 +175,7 @@ data:extend(
   },
   
 })
-end
+
 
 
 

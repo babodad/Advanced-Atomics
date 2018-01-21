@@ -63,7 +63,6 @@ data:extend(
 	},
 })
 
-if AA.ENABLED["Plutonium"] then
 data:extend(
 {
 	--- Plutonium
@@ -111,8 +110,7 @@ data:extend(
 				{"science-pack-2", 1},
 				{"science-pack-3", 2},
 				{"military-science-pack", 2},
-				{"high-tech-science-pack", 2},
-				{"space-science-pack", 3}
+				{"high-tech-science-pack", 3}
 			},
 			time = 42			
 		},
@@ -120,7 +118,7 @@ data:extend(
 	},
 	
 })
-end
+
 
 table.insert(data.raw["technology"]["uranium-ammo"].effects,
 	{
@@ -134,3 +132,14 @@ table.insert(data.raw["technology"]["uranium-ammo"].effects,
 		recipe = "uranium-shotgun-shell"
 	}
 )
+
+if AA.ENABLED["SSP4Plutonium"] then
+	data.raw["technology"]["plutonium"].unit.ingredients = {
+		{"science-pack-1", 1},
+		{"science-pack-2", 1},
+		{"science-pack-3", 2},
+		{"military-science-pack", 2},
+		{"high-tech-science-pack", 2},
+		{"space-science-pack", 3}
+	}
+end

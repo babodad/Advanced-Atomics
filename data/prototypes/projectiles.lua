@@ -151,7 +151,6 @@ data:extend(
 
 })
 
-if AA.ENABLED["Plutonium"] then
 data:extend(
 {
 	--- Plutonium Projectile
@@ -417,5 +416,5 @@ data:extend(
     }
   },
 })
-end
+
 

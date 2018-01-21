@@ -2,7 +2,7 @@ AA = {}
 
 -- ingame config 
 AA.ENABLED = {
-	["Plutonium"] = settings.startup["AA_enable-Plutonium"].value,
+	["SSP4Plutonium"] = settings.startup["AA_enable-SSP4Plutonium"].value,
 	["TreeMapColor"] = settings.startup["AA_enable-TreeMapColor"].value,	
 }
 
@@ -12,11 +12,9 @@ require ("prototypes.technology")
 --- Items
 require("prototypes.uranium-axe")
 require("prototypes.uranium-armor")
-if AA.ENABLED["Plutonium"] then
-    require("prototypes.plutonium")
-    require("prototypes.plutonium-armor")
-    require("prototypes.plutonium-axe")
-end
+require("prototypes.plutonium")
+require("prototypes.plutonium-armor")
+require("prototypes.plutonium-axe")
 require("prototypes.projectiles")
 require("prototypes.ammo")
 
