@@ -41,8 +41,9 @@ data:extend(
 		energy_required = 120,
 		ingredients =
 		{
-			{"explosive-uranium-cannon-shell", 5},
+			{"explosive-uranium-cannon-shell", 4},
 			{"explosives", 10},
+			{"plastic-bar", 2},
 			{"radar", 1}
 		},
 		result = "uranium-artillery-shell"
