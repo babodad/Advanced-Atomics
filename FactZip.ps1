@@ -1,31 +1,45 @@
 # ---------------------------------------------------------------
-# Script: Factorio Modzipping for advanced-atomics
+# Script: Factorio Universal Modzipping 
 # Author: MadUrban,drbert
 # comments: .Net Framework 4.5 required
 #----------------------------------------------------------------
-$mydocuments = [Environment]::GetFolderPath('MyDocuments')
-$sourcedata = "$mydocuments\github\advanced-atomics\data"
+
+#--- path declarations ------------------------------------------
+$7zdir = "$env:ProgramFiles\7-Zip\7z.exe"
+$bindir = ".\bin" 
+$datadir = ".\data"
+$tempdir = ".\temp"
 $modfolder = "$env:APPDATA\factorio\mods\"
 
-$info = Get-Content "$sourcedata\info.json" -Raw | ConvertFrom-Json
-$sourcedir = "$mydocuments\github\advanced-atomics\bin\Advanced-Atomics_$($info.version)"
-copy-item $sourcedata $sourcedir\Advanced-Atomics_$($info.version) -Recurse -Force
 
-$destination = "$sourcedir.zip"
+#--- script-block -----------------------------------------------
 
-If(Test-path $destination) {Remove-item $destination}
-Add-Type -assembly "system.io.compression.filesystem"
-[system.io.compression.zipfile]::CreateFromDirectory($sourcedir, $destination)
+$info = Get-Content "$datadir\info.json" -Raw | ConvertFrom-Json
+$buildname = "$($info.name)_$($info.version)"
+$sourcedir = "$tempdir\$buildname"
+copy-item $datadir $sourcedir -Recurse -Force
 
-Copy-Item $destination $modfolder
+
+
+if (test-path $7zdir) {
+    set-alias 7z $7zdir  
+    7z a -mx=9 "$tempdir\$outputname.zip" "$tempdir\$buildname"
+    Copy-Item "$sourcedir.zip" .\bin
+}
+else {
+    Write-Waring "Could not locate $7zdir - Using native compression.. - Use only for local test!"
+    Add-Type -assembly "system.io.compression.filesystem"
+    [system.io.compression.zipfile]::CreateFromDirectory($tempdir, "$sourcedir.zip")
+}
+
+Copy-Item "$sourcedir.zip" $modfolder
 
 #Check and log to console
-If(Test-path "$env:APPDATA\factorio\mods\Advanced-Atomics_$($info.version).zip") {Write-Output "New build Advanced_Atomics_$($info.version).zip created in $modfolder."}
+if(Test-path "$modfolder\$outputname.zip") {Write-Output "New build $buildname created in $modfolder."}
 else {Write-Output "No new build found/created!" }
 
 #Burn after reading
-If(Test-path $destination) {Remove-item $destination}
-If(Test-path $sourcedir) {Remove-item -path $sourcedir -Recurse}
+Remove-item -path $tempdir -Recurse
 
-#Run Factorio for MadUrban
-If($env:computername.contains("HAL")) {& "D:\Games\SteamLibrary\steamapps\common\Factorio\bin\x64\factorio.exe"}
+#Run Factorio
+explorer.exe steam://rungameid/427520
