@@ -84,9 +84,9 @@ data:extend(
 			  {
 				type = "projectile",
 				projectile = "uranium-shotgun-pellet",
-				starting_speed = 1.2,
-				direction_deviation = 0.3,
-				range_deviation = 0.3,
+				starting_speed = 1.0,
+				direction_deviation = 0.25,
+				range_deviation = 0.25,
 				max_range = 18,
 			  }
 			}
@@ -106,7 +106,7 @@ data:extend(
 		ingredients =
 		{
 		  {"shotgun-shell", 2},
-		  {"uranium-238", 5},
+		  {"uranium-238", 4},
 		  {"steel-plate", 2}
 		},
 		result = "uranium-shotgun-shell"

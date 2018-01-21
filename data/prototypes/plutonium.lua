@@ -38,8 +38,8 @@ data:extend(
       },
       {
         name = "uranium-235",
-        probability = 0.999,
-        amount = 10
+        probability = 0.99,
+        amount = 42
       }
     }
   }
