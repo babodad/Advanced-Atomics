@@ -33,7 +33,7 @@ data:extend(
 	--- Uranium Armor
 	{
 		type = "technology",
-		name = "uranium-warfare",
+		name = "uranium-armor",
 		icon_size = 128,
 		icon = "__Advanced-Atomics__/graphics/technology/uranium-armor_128.png",
 		effects = {
@@ -114,9 +114,8 @@ data:extend(
 			},
 			time = 42			
 		},
-		order = "g-c-d"
-	},
-	
+		order = "e-p-b-e"
+	},	
 })
 
 
@@ -132,6 +131,46 @@ table.insert(data.raw["technology"]["uranium-ammo"].effects,
 		recipe = "uranium-shotgun-shell"
 	}
 )
+
+if AA.ENABLED["UraniumExtraction"] then
+	data:extend(
+	{
+		{
+			type = "technology",
+			name = "uranium-extraction",
+			icon_size = 128,
+			icon = "__Advanced-Atomics__/graphics/technology/uranium-extraction_128.png",
+			effects = {
+				{
+					type = "unlock-recipe",
+					recipe = "water2uranium"
+				},
+				{
+					type = "unlock-recipe",
+					recipe = "copper2uranium"
+				},
+				{
+					type = "unlock-recipe",
+					recipe = "iron2uranium"
+				},
+			},
+			prerequisites = {"nuclear-power", "coal-liquefaction"},
+			unit = {
+				count = 400,
+				ingredients =
+				{
+					{"science-pack-1", 1},
+					{"science-pack-2", 1},
+					{"science-pack-3", 2},
+					{"production-science-pack", 3}
+				},
+				time = 42
+			},
+			order = "e-p-b-d"
+		}
+	})
+end
+		
 
 if AA.ENABLED["SSP4Plutonium"] then
 	data.raw["technology"]["plutonium"].unit.ingredients = {
