@@ -116,6 +116,73 @@ data:extend(
 		},
 	},
 
+	-- Uranium grenade
+
+	{
+		type = "projectile",
+		name = "uranium-grenade",
+		flags = {"not-on-map"},
+		acceleration = 0.005,
+		action =
+		{
+		  {
+			type = "direct",
+			action_delivery =
+			{
+			  type = "instant",
+			  target_effects =
+			  {
+				{
+				  type = "create-entity",
+				  entity_name = "medium-explosion"
+				},
+				{
+				  type = "create-entity",
+				  entity_name = "small-scorchmark",
+				  check_buildability = true
+				}
+			  }
+			}
+		  },
+		  {
+			type = "area",
+			radius = 7,
+			action_delivery =
+			{
+			  type = "instant",
+			  target_effects =
+			  {
+				{
+				type = "damage",
+				damage = {amount = 50, type = "explosion"}
+				},
+				{
+				type = "create-entity",
+				entity_name = "explosion"
+				}
+			  }
+			}
+		  }
+		},
+		light = {intensity = 0.6, size = 4},
+		animation =
+		{
+		  filename = "__Advanced-Atomics__/graphics/entity/grenade.png",
+		  frame_count = 1,
+		  width = 24,
+		  height = 24,
+		  priority = "high"
+		},
+		shadow =
+		{
+		  filename = "__base__/graphics/entity/grenade/grenade-shadow.png",
+		  frame_count = 1,
+		  width = 24,
+		  height = 24,
+		  priority = "high"
+		}
+	  },
+
 	--- uranium-shotgun
 	{
 		type = "projectile",
