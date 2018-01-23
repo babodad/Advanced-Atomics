@@ -1,0 +1,90 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.1.2
+Date: 10. 01. 2018
+  Major Features:
+    - Asphalt can now be placed next to water tiles
+  Minor Features:
+    - Added a setting to define the item group of asphalt tiles (default: "logistics")
+    - Added an optional, seperate item group for asphalt (called "road construction")
+    - If Dectorio is installed, you are able to select the "Dectorio" item tab as preferred item group for asphalt tiles
+    - Added a setting to define the item stack size of asphalt tiles
+    - Added conditional dependencies for BioIndustries and Dectorio
+  Changes:
+    - Changed tile layer of asphalt back to 60 and 61 
+    - All asphalt tiles do now share common transitions, creating a much smoother outline of paved areas
+    - Changed changelog format to fit the style of Factorio 0.16.x
+  Bugfixes:
+    - Fixed decals being rendered on top of asphalt tiles
+    - Fixed rendering problems of asphalt with other tilesets (if the tilesets shared the same layer) by shifting the layer of other tilesets two steps upwards
+---------------------------------------------------------------------------------------------------
+Version: 1.1.1
+Date: 20. 12. 2017
+  Minor Features:
+    - Added a setting for reduced research cost (thanks for your code snippet,  bitbased!)
+  Changes:
+    - Changed the render layer of asphalt to 58 and 59 (diagonal lane marking tiles) (stone = 60; concrete = 61)
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 25. 08. 2017
+  Major Features:
+    - Updated for Factorio 0.16.x
+    - Added white and yellow double line tiles
+  Features:
+    - Added green hazard marking tiles
+    - Added white triangle tiles ("Shark teeth")
+  Graphics:
+    - Reduced line thickness of marking tiles
+    - Changed yellow colour to a more orange tone
+    - Changed brightness of white colour
+    - Complete overhaul of all icons to better match factorios 0.15 tile icon style (inspired by the look of the new vanilla concrete icon)
+  Bugfixes:
+    - Fixed asphalt recipe still using single digit fluid amounts
+  Optimisations:
+    - Cleaned-up prototype definition
+---------------------------------------------------------------------------------------------------
+Version: 1.0.5
+Date: 12. 05. 2017
+  Bugfixes:
+    - Fixed a multiplayer issue caused by an MP-unsave event handler. 
+---------------------------------------------------------------------------------------------------
+Version: 1.0.4
+Date: 30. 04. 2017
+  Major Features:
+    - Updated for Factorio 0.15.x
+  Minor Features:
+    - Added crafting manchine tint for asphalt crafting
+    - (WIP: Added config option for layer priority)
+---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+Date: 15. 04. 2017
+  Minor Features:
+    - Added config file for parameter customization
+    - Added recipe substitution: If BioIndustries is present, crushed stone may be used as asphalt ingridient instead of stone bricks
+  Balancing:
+    - Changed default walking speed modificator to 140% to match that of concrete
+  Graphics:
+    - Darkened map colours to make roads more visible in areas of low contrast
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+Date: 10. 02. 2017
+  Features:
+    - Added corner tiles for white and yellow lane marking
+  Graphics:
+    - Increased brightness of all icons
+  Usability:
+    - All marking and hazard tiles are now set to go to quickbar
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 31. 12. 2016
+  Balancing:
+    - Reduced amount of bricks needed for asphalt by 20%
+  Graphics:
+    - Improved map colours
+  Bugfixes:
+    - Added unique localised string identifiers to avoid problems with other mods
+    - Added correct picture for tile overview
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 23. 12. 2016
+  Major Features:
+    - Initial release 
