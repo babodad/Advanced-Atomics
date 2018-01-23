@@ -38,12 +38,11 @@ data:extend(
 		type = "recipe",
 		name = "uranium-artillery-shell",
 		enabled = false,
-		energy_required = 120,
+		energy_required = 30,
 		ingredients =
 		{
-			{"explosive-uranium-cannon-shell", 4},
-			{"explosives", 10},
-			{"plastic-bar", 2},
+			{"explosive-uranium-cannon-shell", 8},
+			{"explosives", 12},
 			{"radar", 1}
 		},
 		result = "uranium-artillery-shell"
@@ -64,9 +63,9 @@ data:extend(
       {
         type = "projectile",
         ammo_category = "grenade",
-        cooldown = 20,
+        cooldown = 30,
         projectile_creation_distance = 0.6,
-        range = 25,
+        range = 20,
         ammo_type =
         {
           category = "grenade",
@@ -85,19 +84,20 @@ data:extend(
       }
     },
     subgroup = "capsule",
-    order = "b[-uranium-grenade]-a[normal]",
+    order = "a[grenade]-c[uranium]",
     stack_size = 100
 	},
 	{
     type = "recipe",
-    name = "-uranium-grenade",
-    enabled = true,
-    energy_required = 8,
+    name = "uranium-grenade",
+    enabled = false,
+    energy_required = 12,
     ingredients =
     {
-			{"grenade", 10},
-      {"steel-plate", 5},			
-			{"uranium-238", 2},
+			{"grenade", 4},
+      {"steel-plate", 3},			
+			{"explosives", 4},
+			{"uranium-238", 8},
     },
     result = "uranium-grenade"
   },
@@ -206,7 +206,7 @@ data:extend(
 		type = "recipe",
 		name = "plutonium-artillery-shell",
 		enabled = false,
-		energy_required = 120,
+		energy_required = 60,
 		ingredients =
 		{
 			{"plutonium-239", 42},

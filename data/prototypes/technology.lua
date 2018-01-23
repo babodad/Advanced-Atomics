@@ -131,6 +131,12 @@ table.insert(data.raw["technology"]["uranium-ammo"].effects,
 		recipe = "uranium-shotgun-shell"
 	}
 )
+table.insert(data.raw["technology"]["uranium-ammo"].effects,
+	{
+		type = "unlock-recipe",
+		recipe = "uranium-grenade"
+	}
+)
 
 if AA.ENABLED["UraniumExtraction"] then
 	data:extend(

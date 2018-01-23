@@ -1,4 +1,4 @@
----MushroomCloud mod support
+--[[ ---MushroomCloud mod support
 if mods["MushroomCloud"] and AA.ENABLED["Plutonium"] then
     data.raw["artillery-projectile"]["plutonium-artillery-projectile"].action = {
            
@@ -75,4 +75,4 @@ if mods["MushroomCloud"] and AA.ENABLED["Plutonium"] then
         }
     }
 
-end
+end ]]

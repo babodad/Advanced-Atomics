@@ -46,7 +46,7 @@ data:extend(
 				action =
 				{
 					type = "area",
-					radius = 5.0,
+					radius = 8.0,
 					action_delivery =
 					{
 					type = "instant",
@@ -54,15 +54,19 @@ data:extend(
 					{
 						{
 						type = "damage",
-						damage = {amount = 800 , type = "physical"}
+						damage = {amount = 600 , type = "physical"}
 						},
 						{
 						type = "damage",
-						damage = {amount = 500 , type = "explosion"}
+						damage = {amount = 600 , type = "explosion"}
+						},
+						{
+							type = "create-entity",
+							entity_name = "uranium-cannon-shell-explosion"
 						},
 						{
 							type = "destroy-cliffs",
-							radius = 5.0,
+							radius = 6.0,
 							explosion = "explosion"
 						},
 					}
@@ -134,7 +138,7 @@ data:extend(
 			  {
 				{
 				  type = "create-entity",
-				  entity_name = "medium-explosion"
+				  entity_name = "uranium-cannon-explosion"
 				},
 				{
 				  type = "create-entity",
@@ -146,7 +150,7 @@ data:extend(
 		  },
 		  {
 			type = "area",
-			radius = 7,
+			radius = 8,
 			action_delivery =
 			{
 			  type = "instant",
@@ -154,17 +158,17 @@ data:extend(
 			  {
 				{
 				type = "damage",
-				damage = {amount = 50, type = "explosion"}
+				damage = {amount = 80, type = "explosion"}
 				},
 				{
 				type = "create-entity",
-				entity_name = "explosion"
+				entity_name = "uranium-cannon-shell-explosion"
 				}
 			  }
 			}
 		  }
 		},
-		light = {intensity = 0.6, size = 4},
+		light = {intensity = 0.8, size = 6},
 		animation =
 		{
 		  filename = "__Advanced-Atomics__/graphics/entity/grenade.png",
