@@ -1,90 +1,42 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.1.2
-Date: 10. 01. 2018
-  Major Features:
-    - Asphalt can now be placed next to water tiles
-  Minor Features:
-    - Added a setting to define the item group of asphalt tiles (default: "logistics")
-    - Added an optional, seperate item group for asphalt (called "road construction")
-    - If Dectorio is installed, you are able to select the "Dectorio" item tab as preferred item group for asphalt tiles
-    - Added a setting to define the item stack size of asphalt tiles
-    - Added conditional dependencies for BioIndustries and Dectorio
-  Changes:
-    - Changed tile layer of asphalt back to 60 and 61 
-    - All asphalt tiles do now share common transitions, creating a much smoother outline of paved areas
-    - Changed changelog format to fit the style of Factorio 0.16.x
-  Bugfixes:
-    - Fixed decals being rendered on top of asphalt tiles
-    - Fixed rendering problems of asphalt with other tilesets (if the tilesets shared the same layer) by shifting the layer of other tilesets two steps upwards
----------------------------------------------------------------------------------------------------
-Version: 1.1.1
-Date: 20. 12. 2017
-  Minor Features:
-    - Added a setting for reduced research cost (thanks for your code snippet,  bitbased!)
-  Changes:
-    - Changed the render layer of asphalt to 58 and 59 (diagonal lane marking tiles) (stone = 60; concrete = 61)
----------------------------------------------------------------------------------------------------
-Version: 1.1.0
-Date: 25. 08. 2017
-  Major Features:
-    - Updated for Factorio 0.16.x
-    - Added white and yellow double line tiles
-  Features:
-    - Added green hazard marking tiles
-    - Added white triangle tiles ("Shark teeth")
+Version: 0.1.4
+Date: 23. 01. 2018        
   Graphics:
-    - Reduced line thickness of marking tiles
-    - Changed yellow colour to a more orange tone
-    - Changed brightness of white colour
-    - Complete overhaul of all icons to better match factorios 0.15 tile icon style (inspired by the look of the new vanilla concrete icon)
-  Bugfixes:
-    - Fixed asphalt recipe still using single digit fluid amounts
-  Optimisations:
-    - Cleaned-up prototype definition
----------------------------------------------------------------------------------------------------
-Version: 1.0.5
-Date: 12. 05. 2017
-  Bugfixes:
-    - Fixed a multiplayer issue caused by an MP-unsave event handler. 
----------------------------------------------------------------------------------------------------
-Version: 1.0.4
-Date: 30. 04. 2017
-  Major Features:
-    - Updated for Factorio 0.15.x
-  Minor Features:
-    - Added crafting manchine tint for asphalt crafting
-    - (WIP: Added config option for layer priority)
----------------------------------------------------------------------------------------------------
-Version: 1.0.3
-Date: 15. 04. 2017
-  Minor Features:
-    - Added config file for parameter customization
-    - Added recipe substitution: If BioIndustries is present, crushed stone may be used as asphalt ingridient instead of stone bricks
+    - New explosion effects added for Uranium Grenade and Uranium Artillery Shells
+    - Added more glow to Plutonium-239 item
+    - Optimized Uranium Extraction process icons
+    - Changed Uranium Greande icon color
   Balancing:
-    - Changed default walking speed modificator to 140% to match that of concrete
-  Graphics:
-    - Darkened map colours to make roads more visible in areas of low contrast
----------------------------------------------------------------------------------------------------
-Version: 1.0.2
-Date: 10. 02. 2017
-  Features:
-    - Added corner tiles for white and yellow lane marking
-  Graphics:
-    - Increased brightness of all icons
-  Usability:
-    - All marking and hazard tiles are now set to go to quickbar
----------------------------------------------------------------------------------------------------
-Version: 1.0.1
-Date: 31. 12. 2016
-  Balancing:
-    - Reduced amount of bricks needed for asphalt by 20%
-  Graphics:
-    - Improved map colours
+    - Uranium Artillery Shell (reduced crafting time, increased explosion radius, reduced damage, changed ingredients)
+    - Plutonium Artillery Shell (reduced crafting time)
+    - Uranium Greande (increased crafting time, reduced range, increased explosion radius and dmg, changed ingredients)
   Bugfixes:
-    - Added unique localised string identifiers to avoid problems with other mods
-    - Added correct picture for tile overview
+    - Uranium Grenade was available without research -> now requires Uranium Ammo tech
+    - Added missing setting description in localization
 ---------------------------------------------------------------------------------------------------
-Version: 1.0.0
-Date: 23. 12. 2016
+Version: 0.1.3
+Date: 22. 01. 2018
+  Major Features:
+    - Uranium Extraction Process to yield uranium ore with sulfuric acid from copper iron or water (optional setting)
+  Minor Features:
+  - Added Uranium Grenades
+---------------------------------------------------------------------------------------------------
+Version: 0.1.2
+Date: 21. 01. 2018
+  Features:
+    - Added Uranium Shotgun Shells
+    - Added Plutonium Missiles (enhanced atomic bomb made of Plutonium-239)
+    - Space Science Pack requirement for plutonium technology is now an optional setting
+  Balancing:
+    - Changed recipe of Plutonium Nucleosynthesis (based on Kovarex Enrichment Process with probability of process failure)
+---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+Date: 20. 01. 2018
+  Bugfixes:
+    - Changed zip compression to work on headless unix servers
+    - Fixed some typos in localization 
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 19. 01. 2018
   Major Features:
     - Initial release 
