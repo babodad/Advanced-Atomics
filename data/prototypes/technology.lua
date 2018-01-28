@@ -99,9 +99,17 @@ data:extend(
 			{
 				type = "unlock-recipe",
 				recipe = "plutonium-missile"
-			}
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "mox-fuel-cell"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "plutonium-fuel"
+			},
 		},
-		prerequisites = {"kovarex-enrichment-process"},
+		-- prerequisites = {"kovarex-enrichment-process"},
 		unit = {
 			count = 1000,
 			ingredients = 
@@ -116,8 +124,51 @@ data:extend(
 		},
 		order = "e-p-b-e"
 	},	
-})
 
+--[[ 	---Plutonium warfare
+	{
+		type = "technology",
+		name = "plutonium-warfare",
+		icon_size = 128,
+		icon = "__Advanced-Atomics__/graphics/technology/plutonium-warfare_128.png",
+		effects = {		
+			{
+				type = "unlock-recipe",
+				recipe = "plutonium-armor"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "plutonium-shield-equipment"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "radionuclide-battery-equipment"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "plutonium-artillery-shell"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "plutonium-missile"
+			},
+		},
+		prerequisites = {"plutonium", "artillery"},
+		unit = {
+			count = 1000,
+			ingredients = 
+			{
+				{"science-pack-1", 1},
+				{"science-pack-2", 1},
+				{"science-pack-3", 1},
+				{"military-science-pack", 2},
+				{"high-tech-science-pack", 2}
+			},
+			time = 42			
+		},
+		order = "e-p-b-f"
+	}, ]]
+})
 
 table.insert(data.raw["technology"]["uranium-ammo"].effects,
 	{
@@ -176,7 +227,6 @@ if AA.ENABLED["UraniumExtraction"] then
 		}
 	})
 end
-		
 
 if AA.ENABLED["SSP4Plutonium"] then
 	data.raw["technology"]["plutonium"].unit.ingredients = {

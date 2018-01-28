@@ -1,6 +1,5 @@
 data:extend(
 {  
-
   --- Uranium Shield
   {
   type = "item",
