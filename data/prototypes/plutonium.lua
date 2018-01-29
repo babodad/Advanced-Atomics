@@ -56,7 +56,7 @@ data:extend(
     fuel_acceleration_multiplier = 3,
     fuel_top_speed_multiplier = 1.25,
     subgroup = "intermediate-product",
-    order = "r[plutonium-rocket-fuel]",
+    order = "q[uranium-rocket-fuel]",
     stack_size = 1
   },
   {
@@ -119,6 +119,7 @@ data:extend(
 
 })
 
+if not AA.ENABLED["SSP4Plutonium"] then
 --- modify nuclear-fuel-reprocessing
 data.raw["recipe"]["nuclear-fuel-reprocessing"].results =
   {
@@ -133,3 +134,4 @@ data.raw["recipe"]["nuclear-fuel-reprocessing"].results =
       probability = 0.1,
     }
   }
+end
