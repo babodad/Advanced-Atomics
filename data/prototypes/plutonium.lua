@@ -56,7 +56,7 @@ data:extend(
     fuel_acceleration_multiplier = 3,
     fuel_top_speed_multiplier = 1.25,
     subgroup = "intermediate-product",
-    order = "q[uranium-rocket-fuel]",
+    order = "r[plutonium-fuel]",
     stack_size = 1
   },
   {
@@ -66,6 +66,7 @@ data:extend(
     enabled = false,
     category = "centrifuging",
     subgroup = "intermediate-product",
+    order = "r[plutonium-fuel]",
     ingredients = {
       {"plutonium-239", 2},      
       {"rocket-fuel", 1}
