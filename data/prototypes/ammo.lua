@@ -1,5 +1,79 @@
 data:extend(
 {
+	-- Uranium Flamethrower Ammo
+	{
+    type = "ammo",
+    name = "uranium-flamethrower-ammo",
+    icon = "__Advanced-Atomics__/graphics/icons/uranium-flamethrower-ammo.png",
+    icon_size = 32,
+    flags = {"goes-to-main-inventory"},
+    ammo_type =
+    {
+      {
+        source_type = "default",
+        category = "flamethrower",
+        target_type = "position",
+        clamp_position = true,
+
+        action =
+        {
+          type = "direct",
+          action_delivery =
+          {
+            type = "stream",
+            stream = "handheld-uranium-flamethrower-fire-stream",
+            max_length = 20,
+            duration = 160,
+          }
+        }
+      },
+      {
+        source_type = "vehicle",
+        consumption_modifier = 1.125,
+        category = "flamethrower",
+        target_type = "position",
+        clamp_position = true,
+
+        action =
+        {
+          type = "direct",
+          action_delivery =
+          {
+            type = "stream",
+            stream = "tank-flamethrower-fire-stream",
+            max_length = 9,
+            duration = 160,
+          }
+        }
+      }
+    },
+    magazine_size = 100,
+    subgroup = "ammo",
+    order = "e[uranium-flamethrower]",
+    stack_size = 100
+	},
+
+	{
+    type = "recipe",
+    name = "uranium-flamethrower-ammo",
+    category = "chemistry",
+    enabled = true,
+    energy_required = 6,
+    ingredients =
+    {
+      {type="item", name="steel-plate", amount=5},
+      {type="fluid", name="light-oil", amount=50},
+      {type="fluid", name="heavy-oil", amount=50}
+    },
+    result = "uranium-flamethrower-ammo",
+    crafting_machine_tint =
+    {
+      primary = {r = 0.845, g = 0.533, b = 0.000, a = 0.000}, -- #d7870000
+      secondary = {r = 0.655, g = 0.000, b = 0.000, a = 0.000}, -- #a7000000
+      tertiary = {r = 0.685, g = 0.329, b = 0.000, a = 0.000}, -- #ae530000
+    }
+  },
+	
 	---Uranium Shell
 	{
 		type = "ammo",
@@ -102,7 +176,7 @@ data:extend(
     result = "uranium-grenade"
   },
 
-	--- uranium shotgun
+	--- uranium shotgun shell
 	{
 		type = "ammo",
 		name = "uranium-shotgun-shell",
