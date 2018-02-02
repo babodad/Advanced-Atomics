@@ -27,8 +27,8 @@ data:extend({
         build_distance_bonus = 6*AA.DistFactor,
         reach_distance_bonus = 6*AA.DistFactor,
 		item_drop_distance_bonus = 6*AA.DistFactor,
-		item_pickup_distance_bonus = 6*AA.DistFactor,
-		loot_pickup_distance_bonus = 2*AA.DistFactor,
+		--item_pickup_distance_bonus = 6*AA.DistFactor,
+		--loot_pickup_distance_bonus = 2*AA.DistFactor,
 		resource_reach_distance_bonus = 2*AA.DistFactor
 	},	
   
@@ -73,8 +73,8 @@ data:extend({
         build_distance_bonus = 12*AA.DistFactor,
         reach_distance_bonus = 12*AA.DistFactor,
 		item_drop_distance_bonus = 12*AA.DistFactor,
-		item_pickup_distance_bonus = 12*AA.DistFactor,
-		loot_pickup_distance_bonus = 4*AA.DistFactor,
+		--item_pickup_distance_bonus = 12*AA.DistFactor,
+		--loot_pickup_distance_bonus = 4*AA.DistFactor,
 		resource_reach_distance_bonus = 4*AA.DistFactor
 	},
 
@@ -120,10 +120,10 @@ data:extend({
         order = "a[mining]-e[plutonium-axe]",---test: 
         speed = 18,
         stack_size = 5,
-        build_distance_bonus = 18*AA.DistFactor,
-        item_drop_distance_bonus = 18*AA.DistFactor,
-        item_pickup_distance_bonus = 18*AA.DistFactor,
-        loot_pickup_distance_bonus = 8*AA.DistFactor,
+        build_distance_bonus = 20*AA.DistFactor,
+        item_drop_distance_bonus = 20*AA.DistFactor,
+        --item_pickup_distance_bonus = 18*AA.DistFactor,
+        --loot_pickup_distance_bonus = 8*AA.DistFactor,
         resource_reach_distance_bonus = 8*AA.DistFactor
     },	
   
