@@ -18,7 +18,7 @@ data:extend(
     {
       {
         name = "soft-fire-smoke",
-        frequency = 0.25, --0.25, 0.05
+        frequency = 0.05, --0.25, 0.05
         position = {0.0, 0}, -- -0.8},
         starting_frame_deviation = 60
       }
@@ -82,7 +82,6 @@ data:extend(
     {
       filename = "__Advanced-Atomics__/graphics/entity/flamethrower-fire-stream/uranium-flamethrower-fire-stream-spine.png",
       blend_mode = "additive",
-      --tint = {r=0, g=1, b=0, a=0.5},
       line_length = 4,
       width = 32,
       height = 18,
@@ -179,7 +178,6 @@ data:extend(
     {
       filename = "__Advanced-Atomics__/graphics/entity/flamethrower-fire-stream/uranium-flamethrower-fire-stream-spine.png",
       blend_mode = "additive",
-      --tint = {r=1, g=1, b=1, a=0.5},
       line_length = 4,
       width = 32,
       height = 18,

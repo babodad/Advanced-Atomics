@@ -62,16 +62,16 @@ data:extend(
     ingredients =
     {
 			{type="item", name="steel-plate", amount=5},
-			{type="item", name="uranium-238", amount=3}
+			{type="item", name="uranium-238", amount=3},
       {type="fluid", name="light-oil", amount=50},
       {type="fluid", name="heavy-oil", amount=50}
     },
     result = "uranium-flamethrower-ammo",
     crafting_machine_tint =
     {
-      primary = {r = 0.545, g = 0.733, b = 0.000, a = 0.000}, -- #d7870000
-      secondary = {r = 0.555, g = 0.200, b = 0.000, a = 0.000}, -- #a7000000
-      tertiary = {r = 0.585, g = 0.329, b = 0.000, a = 0.000}, -- #ae530000
+      primary = {r = 0.245, g = 0.733, b = 0.000, a = 0.000}, -- #d7870000
+      secondary = {r = 0.255, g = 0.300, b = 0.000, a = 0.000}, -- #a7000000
+      tertiary = {r = 0.285, g = 0.329, b = 0.000, a = 0.000}, -- #ae530000
     }
   },
 	
