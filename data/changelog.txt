@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.6
+Date: 04. 02. 2018        
+  Features:
+    - 
+---------------------------------------------------------------------------------------------------
 Version: 0.1.5
 Date: 28. 01. 2018        
   Features:
@@ -7,7 +12,6 @@ Date: 28. 01. 2018
     - Modified nuclear fuel recprocessing recipe: Small chance to gain Plutonium-239 added
   Bugfixes:
     - Added compatability with mods that remove "kovarex enrichment process" (e.g. SigmaOne's Mods: Nuclear)
-
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.4
 Date: 23. 01. 2018        
