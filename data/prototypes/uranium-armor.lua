@@ -19,6 +19,7 @@ data:extend(
     type = "armor",
     name = "uranium-armor",
     icon = "__Advanced-Atomics__/graphics/icons/uranium-armor.png",
+    tint = {r=0, g=1, b=0, a=0.5},  
     icon_size = 32,
     flags = {"goes-to-main-inventory"},
     resistances =
