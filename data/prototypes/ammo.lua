@@ -29,7 +29,7 @@ data:extend(
       },
       {
         source_type = "vehicle",
-        consumption_modifier = 1.125,
+        consumption_modifier = 1.100,
         category = "flamethrower",
         target_type = "position",
         clamp_position = true,
@@ -61,16 +61,17 @@ data:extend(
     energy_required = 6,
     ingredients =
     {
-      {type="item", name="steel-plate", amount=5},
+			{type="item", name="steel-plate", amount=5},
+			{type="item", name="uranium-238", amount=3}
       {type="fluid", name="light-oil", amount=50},
       {type="fluid", name="heavy-oil", amount=50}
     },
     result = "uranium-flamethrower-ammo",
     crafting_machine_tint =
     {
-      primary = {r = 0.845, g = 0.533, b = 0.000, a = 0.000}, -- #d7870000
-      secondary = {r = 0.655, g = 0.000, b = 0.000, a = 0.000}, -- #a7000000
-      tertiary = {r = 0.685, g = 0.329, b = 0.000, a = 0.000}, -- #ae530000
+      primary = {r = 0.545, g = 0.733, b = 0.000, a = 0.000}, -- #d7870000
+      secondary = {r = 0.555, g = 0.200, b = 0.000, a = 0.000}, -- #a7000000
+      tertiary = {r = 0.585, g = 0.329, b = 0.000, a = 0.000}, -- #ae530000
     }
   },
 	

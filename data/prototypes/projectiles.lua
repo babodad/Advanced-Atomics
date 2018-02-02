@@ -82,7 +82,7 @@ data:extend(
     {
       filename = "__Advanced-Atomics__/graphics/entity/flamethrower-fire-stream/uranium-flamethrower-fire-stream-spine.png",
       blend_mode = "additive",
-      tint = {r=0, g=1, b=0, a=0.5},
+      --tint = {r=0, g=1, b=0, a=0.5},
       line_length = 4,
       width = 32,
       height = 18,
