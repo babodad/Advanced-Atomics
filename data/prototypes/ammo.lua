@@ -22,7 +22,7 @@ data:extend(
           {
             type = "stream",
             stream = "handheld-uranium-flamethrower-fire-stream",
-            max_length = 20,
+            max_length = 22,
             duration = 160,
           }
         }
@@ -41,7 +41,7 @@ data:extend(
           {
             type = "stream",
             stream = "tank-uranium-flamethrower-fire-stream",
-            max_length = 9,
+            max_length = 12,
             duration = 160,
           }
         }
@@ -57,21 +57,21 @@ data:extend(
     type = "recipe",
     name = "uranium-flamethrower-ammo",
     category = "chemistry",
-    enabled = true,
-    energy_required = 6,
+    enabled = false,
+    energy_required = 8,
     ingredients =
     {
 			{type="item", name="steel-plate", amount=5},
-			{type="item", name="uranium-238", amount=3}
+			{type="item", name="uranium-238", amount=5},
       {type="fluid", name="light-oil", amount=50},
       {type="fluid", name="heavy-oil", amount=50}
     },
     result = "uranium-flamethrower-ammo",
     crafting_machine_tint =
     {
-      primary = {r = 0.545, g = 0.733, b = 0.000, a = 0.000}, -- #d7870000
-      secondary = {r = 0.555, g = 0.200, b = 0.000, a = 0.000}, -- #a7000000
-      tertiary = {r = 0.585, g = 0.329, b = 0.000, a = 0.000}, -- #ae530000
+      primary = {r = 0.545, g = 0.833, b = 0.000, a = 0.200}, -- #d7870000
+      secondary = {r = 0.555, g = 0.300, b = 0.000, a = 0.200}, -- #a7000000
+      tertiary = {r = 0.585, g = 0.429, b = 0.000, a = 0.200}, -- #ae530000
     }
   },
 	
