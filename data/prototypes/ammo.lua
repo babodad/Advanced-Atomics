@@ -40,7 +40,7 @@ data:extend(
           action_delivery =
           {
             type = "stream",
-            stream = "tank-flamethrower-fire-stream",
+            stream = "tank-uranium-flamethrower-fire-stream",
             max_length = 9,
             duration = 160,
           }
