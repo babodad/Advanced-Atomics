@@ -15,7 +15,11 @@
             "taskName": "build",
             "showOutput": "always",
             "isBuildCommand": true,
-            "problemMatcher": []
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }
