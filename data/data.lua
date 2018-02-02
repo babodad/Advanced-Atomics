@@ -44,6 +44,7 @@ require("prototypes.plutonium")
 require("prototypes.plutonium-armor")
 require("prototypes.projectiles")
 require("prototypes.ammo")
+--require("prototypes.atomic-warfare")
 
 ---- Equipment
 require("prototypes.equipment")
