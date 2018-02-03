@@ -5,6 +5,8 @@ Date: 03. 02. 2018
     - Added uranium flamethrower ammunition
     - New settings option: Custom distance bonus for pickaxes 
     - New settings option: Constrast levels for TreeMapColor
+  Balancing:
+    - Reduced distance bonus for pickaxes
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.5
 Date: 28. 01. 2018        
