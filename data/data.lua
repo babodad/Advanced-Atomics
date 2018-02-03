@@ -24,7 +24,7 @@ end
 AA.TreeContrast = settings.startup["AA_TreeMapContrast"].value
 
 if AA.TreeContrast == "low" then
-	data.raw["utility-constants"]["default"]["chart"]["default_color_by_type"].tree = {a = 0.3, r = 0.1, g = 0.3, b = 0.1}
+	data.raw["utility-constants"]["default"]["chart"]["default_color_by_type"].tree = {a = 0.3, r = 0.1, g = 0.4, b = 0.1}
 elseif AA.TreeContrast == "medium"  then
 	data.raw["utility-constants"]["default"]["chart"]["default_color_by_type"].tree = {a = 0.4, r = 0.1, g = 0.4, b = 0.1}    
 elseif AA.TreeContrast == "high"  then
