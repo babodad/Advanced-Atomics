@@ -4,8 +4,9 @@ data:extend(
 	{
     type = "ammo",
     name = "uranium-flamethrower-ammo",
-    icons = {{icon = "__Advanced-Atomics__/graphics/icons/uranium-flamethrower-ammo.png", tint = {r = 0.2, g = 0.8, b = 0.1, a = 0.8}}},
-    icon_size = 32,
+    --icons = {{icon = "__Advanced-Atomics__/graphics/icons/uranium-flamethrower-ammo.png", tint = {r = 0.1, g = 0.6, b = 0.1, a = 0.8}}},
+		icon = "__Advanced-Atomics__/graphics/icons/uranium-flamethrower-ammo.png",
+		icon_size = 32,
     flags = {"goes-to-main-inventory"},
     ammo_type =
     {
