@@ -76,6 +76,20 @@ data:extend(
 				}
 				},
 				{
+					type = "cluster",
+					cluster_count = 7,
+					distance = 4,
+					distance_deviation = 3,
+					action_delivery =
+					{
+						type = "projectile",
+						projectile = "grenade",
+						direction_deviation = 0.6,
+						starting_speed = 0.25,
+						starting_speed_deviation = 0.3
+					}
+				}
+				{
 				type = "create-trivial-smoke",
 				smoke_name = "artillery-smoke",
 				initial_height = 0,
