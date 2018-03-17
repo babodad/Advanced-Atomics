@@ -1,141 +1,6 @@
 data:extend(
 {
 
-	--- Cluster shells
-
-	{
-		type = "artillery-projectile",
-		name = "cluster-artillery-projectile",
-		flags = {"not-on-map"},
-		acceleration = 0,
-		direction_only = true,
-		reveal_map = true,
-		map_color = {r=1, g=1, b=0},
-		picture =
-		{
-			filename = "__Advanced-Atomics__/graphics/entity/artillery-projectile/hr-uranium-shell.png",
-			width = 64,
-			height = 64,
-			scale = 0.5,
-		},
-		shadow =
-		{
-			filename = "__base__/graphics/entity/artillery-projectile/hr-shell-shadow.png",
-			width = 64,
-			height = 64,
-			scale = 0.5,
-		},
-		chart_picture =
-		{
-			filename = "__Advanced-Atomics__/graphics/entity/artillery-projectile/uranium-artillery-shoot-map-visualization.png",
-			flags = { "icon" },
-			frame_count = 1,
-			width = 64,
-			height = 64,
-			priority = "high",
-			scale = 0.25,
-		},
-		action =
-		{
-			type = "direct",
-			action_delivery =
-			{
-			type = "instant",
-			target_effects =
-			{
-				{
-				type = "nested-result",
-				action =
-				{
-					type = "area",
-					radius = 8.0,
-					action_delivery =
-					{
-					type = "instant",
-					target_effects =
-					{
-						{
-						type = "damage",
-						damage = {amount = 600 , type = "physical"}
-						},
-						{
-						type = "damage",
-						damage = {amount = 600 , type = "explosion"}
-						},
-						{
-							type = "create-entity",
-							entity_name = "uranium-cannon-shell-explosion"
-						},
-						{
-							type = "destroy-cliffs",
-							radius = 6.0,
-							explosion = "explosion"
-						},
-					}
-					}
-				}
-				},
-				{
-					type = "cluster",
-					cluster_count = 7,
-					distance = 4,
-					distance_deviation = 3,
-					action_delivery =
-					{
-						type = "projectile",
-						projectile = "grenade",
-						direction_deviation = 0.6,
-						starting_speed = 0.25,
-						starting_speed_deviation = 0.3
-					}
-				}
-				{
-				type = "create-trivial-smoke",
-				smoke_name = "artillery-smoke",
-				initial_height = 0,
-				speed_from_center = 0.05,
-				speed_from_center_deviation = 0.005,
-				offset_deviation = {{-4, -4}, {4, 4}},
-				max_radius = 3.5,
-				repeat_count = 4 * 4 * 15
-				},
-				{
-				type = "create-entity",
-				entity_name = "big-artillery-explosion"
-				},
-				{
-				type = "show-explosion-on-chart",
-				scale = 8/32,
-				}
-			}
-			}
-		},
-		final_action =
-		{
-			type = "direct",
-			action_delivery =
-			{
-			type = "instant",
-			target_effects =
-			{
-				{
-				type = "create-entity",
-				entity_name = "small-scorchmark",
-				check_buildability = true
-				}
-			}
-			}
-		},
-		animation =
-		{
-			filename = "__base__/graphics/entity/bullet/bullet.png",
-			frame_count = 1,
-			width = 3,
-			height = 50,
-			priority = "high"
-		},
-	},
-
 	--- Uranium shells
 	{
 		type = "artillery-projectile",
@@ -360,6 +225,231 @@ data:extend(
 
 data:extend(
 {
+
+	--- Cluster shells
+	{
+		type = "artillery-projectile",
+		name = "cluster-artillery-projectile",
+		flags = {"not-on-map"},
+		acceleration = 0,
+		direction_only = true,
+		reveal_map = true,
+		map_color = {r=0, g=1, b=1},
+		picture =
+		{
+			filename = "__Advanced-Atomics__/graphics/entity/artillery-projectile/hr-uranium-shell.png",
+			width = 64,
+			height = 64,
+			scale = 0.5,
+		},
+		shadow =
+		{
+			filename = "__base__/graphics/entity/artillery-projectile/hr-shell-shadow.png",
+			width = 64,
+			height = 64,
+			scale = 0.5,
+		},
+		chart_picture =
+		{
+			filename = "__Advanced-Atomics__/graphics/entity/artillery-projectile/uranium-artillery-shoot-map-visualization.png",
+			flags = { "icon" },
+			frame_count = 1,
+			width = 64,
+			height = 64,
+			priority = "high",
+			scale = 0.25,
+		},
+		action =
+		{
+			{
+			type = "direct",
+			action_delivery =
+			{
+			type = "instant",
+			target_effects =
+			{
+				{
+				type = "nested-result",
+				action =
+				{
+					type = "area",
+					radius = 6.0,
+					action_delivery =
+					{
+					type = "instant",
+					target_effects =
+					{
+						{
+						type = "damage",
+						damage = {amount = 500 , type = "physical"}
+						},
+						{
+						type = "damage",
+						damage = {amount = 500 , type = "explosion"}
+						},
+						{
+							type = "create-entity",
+							entity_name = "uranium-cannon-shell-explosion"
+						},
+						{
+							type = "destroy-cliffs",
+							radius = 4.0,
+							explosion = "explosion"
+						},
+					}
+					}
+				}
+				},
+				
+				{
+				type = "create-trivial-smoke",
+				smoke_name = "artillery-smoke",
+				initial_height = 0,
+				speed_from_center = 0.05,
+				speed_from_center_deviation = 0.005,
+				offset_deviation = {{-4, -4}, {4, 4}},
+				max_radius = 3.5,
+				repeat_count = 4 * 4 * 15
+				},
+				{
+				type = "create-entity",
+				entity_name = "big-artillery-explosion"
+				},
+				{
+				type = "show-explosion-on-chart",
+				scale = 8/32,
+				}
+			}
+			}
+		},
+							
+			{
+				type = "cluster",
+				cluster_count = 40,
+				distance = 22,
+				distance_deviation = 4,
+				action_delivery =
+				{
+					type = "projectile",
+					projectile = "uranium-grenade",
+					direction_deviation = 0.7,
+					starting_speed = 0.25,
+					starting_speed_deviation = 0.3
+				}
+			},
+			{
+				type = "cluster",
+				cluster_count = 20,
+				distance = 18,
+				distance_deviation = 4,
+				action_delivery =
+				{
+					type = "projectile",
+					projectile = "grenade",
+					direction_deviation = 0.7,
+					starting_speed = 0.25,
+					starting_speed_deviation = 0.3
+				}
+			},
+			{
+				type = "cluster",
+				cluster_count = 5,
+				distance = 10,
+				distance_deviation = 4,
+				action_delivery =
+				{
+					type = "projectile",
+					projectile = "cluster-grenade",
+					direction_deviation = 0.7,
+					starting_speed = 0.25,
+					starting_speed_deviation = 0.3
+				}
+			},
+		},
+		final_action =
+		{
+			type = "direct",
+			action_delivery =
+			{
+			type = "instant",
+			target_effects =
+			{
+				{
+				type = "create-entity",
+				entity_name = "small-scorchmark",
+				check_buildability = true
+				}
+			}
+			}
+		},
+		animation =
+		{
+			filename = "__base__/graphics/entity/bullet/bullet.png",
+			frame_count = 1,
+			width = 3,
+			height = 50,
+			priority = "high"
+		},
+	},
+	
+	-- Nukebot Capsule
+
+	{
+		type = "projectile",
+		name = "nukebot-capsule",
+		flags = {"not-on-map"},
+		acceleration = 0.005,
+		action =
+		{
+		  type = "direct",
+		  action_delivery =
+		  {
+			type = "instant",
+			target_effects =
+			{
+			  type = "create-entity",
+			  show_in_tooltip = true,
+			  entity_name = "nukebot",
+			  -- offsets = {{-0.7, -0.7},{-0.7, 0.7},{0.7, -0.7},{0.7, 0.7},{0, 0}}
+			  offsets = {{0, 0}}
+			}
+		  }
+		},
+		light = {intensity = 0.5, size = 4},
+		enable_drawing_with_mask = true,
+		animation = {
+		  layers = {
+			{
+			  filename = "__base__/graphics/entity/combat-robot-capsule/destroyer-capsule.png",
+			  flags = { "no-crop" },
+			  frame_count = 1,
+			  width = 42,
+			  height = 34,
+			  priority = "high"
+			},
+			{
+			  filename = "__base__/graphics/entity/combat-robot-capsule/destroyer-capsule-mask.png",
+			  flags = { "no-crop" },
+			  frame_count = 1,
+			  width = 42,
+			  height = 34,
+			  priority = "high",
+			  apply_runtime_tint = true,
+			},
+		  },
+		},
+		shadow =
+		{
+		  filename = "__base__/graphics/entity/combat-robot-capsule/destroyer-capsule-shadow.png",
+		  flags = { "no-crop" },
+		  frame_count = 1,
+		  width = 48,
+		  height = 32,
+		  priority = "high"
+		},
+		smoke = capsule_smoke
+	  },
+
 	--- Plutonium Projectile
 	{
 		type = "artillery-projectile",

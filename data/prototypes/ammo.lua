@@ -50,6 +50,59 @@ data:extend(
 		result = "cluster-artillery-shell"
 	},
 
+		-- Nukebot Capsule
+
+		{
+			type = "capsule",
+			name = "nukebot-capsule",
+			icon = "__base__/graphics/icons/destroyer.png",
+			icon_size = 32,
+			flags = {"goes-to-quickbar"},
+			capsule_action =
+			{
+				type = "throw",
+				attack_parameters =
+				{
+					type = "projectile",
+					ammo_category = "capsule",
+					cooldown = 30,
+					projectile_creation_distance = 5.0, --0.6
+					range = 50, --25
+					ammo_type =
+					{
+						category = "capsule",
+						target_type = "position",
+						action =
+						{
+							type = "direct",
+							action_delivery =
+							{
+								type = "projectile",
+								projectile = "nukebot-capsule",
+								starting_speed = 0.3
+							}
+						}
+					}
+				}
+			},
+			subgroup = "capsule",
+			order = "g[nukebot-capsule]",
+			stack_size = 100
+		},	
+
+		{
+			type = "recipe",
+			name = "nukebot-capsule",
+			enabled = true,
+			energy_required = 15,
+			ingredients =
+			{
+				{"distractor-capsule", 4},
+				{"speed-module", 1}
+			},
+			result = "nukebot-capsule"
+		},
+
 	---Uranium Shell
 	{
 		type = "ammo",

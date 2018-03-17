@@ -14,7 +14,8 @@
         {
             "taskName": "build",
             "showOutput": "always",
-            "isBuildCommand": true
+            "isBuildCommand": true,
+            "problemMatcher": []
         }
     ]
 }

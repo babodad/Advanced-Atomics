@@ -19,6 +19,7 @@ require("prototypes.plutonium-armor")
 require("prototypes.plutonium-axe")
 require("prototypes.projectiles")
 require("prototypes.ammo")
+require("prototypes.entities")
 
 --- Equipment
 require("prototypes.equipment")
