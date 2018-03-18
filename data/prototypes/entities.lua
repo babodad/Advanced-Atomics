@@ -31,7 +31,7 @@ data:extend(
             source_effects =
             {
                 type = "create-entity",
-                entity_name = "explosion"
+                entity_name = "uranium-cannon-shell-explosion"
             }
           }
         },
@@ -121,75 +121,75 @@ data:extend(
           layers =
           {
             {
-              filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot.png",
+              filename = "__Advanced-Atomics__/graphics/entity/nukebot.png",
               priority = "high",
               line_length = 32,
-              width = 45,
-              height = 39,
-              y = 39,
+              width = 64,
+              height = 51,
+              y = 51, --39
               frame_count = 1,
               direction_count = 32,
-              shift = {0.078125, -0.546875},
+              --shift = {0.078125, -0.546875},
               hr_version = {
-                filename = "__base__/graphics/entity/destroyer-robot/hr-destroyer-robot.png",
+                filename = "__Advanced-Atomics__/graphics/entity/nukebot.png",
                 priority = "high",
                 line_length = 32,
-                width = 88,
-                height = 77,
-                y = 77,
+                width = 64,
+                height = 50,
+                y = 50,
                 frame_count = 1,
                 direction_count = 32,
-                shift = util.by_pixel(2.5, -17.25),
-                scale = 0.5
+                --shift = util.by_pixel(2.5, -17.25),
+                --scale = 0.5
               }
             },
             {
-              filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot-mask.png",
+              filename = "__Advanced-Atomics__/graphics/entity/nukebot_mask.png",
               priority = "high",
               line_length = 32,
-              width = 27,
-              height = 21,
-              y = 21,
+              width = 64,
+              height = 50,
+              y = 50,
               frame_count = 1,
               direction_count = 32,
-              shift = {0.078125, -0.734375},
+              --shift = {0.078125, -0.734375},
               apply_runtime_tint = true,
               hr_version = {
-                filename = "__base__/graphics/entity/destroyer-robot/hr-destroyer-robot-mask.png",
+                filename = "__Advanced-Atomics__/graphics/entity/nukebot_mask.png",
                 priority = "high",
                 line_length = 32,
-                width = 52,
-                height = 42,
-                y = 42,
+                width = 64,
+                height = 50,
+                y = 50,
                 frame_count = 1,
                 direction_count = 32,
-                shift = util.by_pixel(2.5, -23),
+                --shift = util.by_pixel(2.5, -23),
                 apply_runtime_tint = true,
-                scale = 0.5
+                --scale = 0.5
               }
             },
-          }
+          } 
         },
         shadow_idle =
         {
-          filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot-shadow.png",
+          filename = "__Advanced-Atomics__/graphics/entity/nukebot_shadow.png",
           priority = "high",
           line_length = 32,
-          width = 48,
-          height = 32,
+          width = 64,
+          height = 51,
           frame_count = 1,
           direction_count = 32,
-          shift = {0.78125, 0},
+          --shift = {0.78125, 0},
           hr_version = {
-            filename = "__base__/graphics/entity/destroyer-robot/hr-destroyer-robot-shadow.png",
+            filename = "__Advanced-Atomics__/graphics/entity/nukebot_mask.pngg",
             priority = "high",
             line_length = 32,
-            width = 108,
-            height = 66,
+            width = 64,
+            height = 50,
             frame_count = 1,
             direction_count = 32,
-            shift = util.by_pixel(23.5, 1),
-            scale = 0.5
+            --shift = util.by_pixel(23.5, 1),
+            --scale = 0.5
           }
         },
         in_motion =
@@ -197,71 +197,71 @@ data:extend(
           layers =
           {
             {
-              filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot.png",
+              filename = "__Advanced-Atomics__/graphics/entity/nukebot.png",
               priority = "high",
               line_length = 32,
-              width = 45,
-              height = 39,
+              width = 64,
+              height = 51,
               frame_count = 1,
               direction_count = 32,
-              shift = {0.078125, -0.546875},
+              --shift = {0.078125, -0.546875},
               hr_version = {
-                filename = "__base__/graphics/entity/destroyer-robot/hr-destroyer-robot.png",
+                filename = "__Advanced-Atomics__/graphics/entity/nukebot.png",
                 priority = "high",
                 line_length = 32,
-                width = 88,
-                height = 77,
+                width = 64,
+                height = 51,
                 frame_count = 1,
                 direction_count = 32,
-                shift = util.by_pixel(2.5, -17.25),
-                scale = 0.5
+                --shift = util.by_pixel(2.5, -17.25),
+               -- scale = 0.5
               }
             },
             {
-              filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot-mask.png",
+              filename = "__Advanced-Atomics__/graphics/entity/nukebot_mask.png",
               priority = "high",
               line_length = 32,
-              width = 27,
-              height = 21,
+              width = 64,
+              height = 50,
               frame_count = 1,
               direction_count = 32,
-              shift = {0.078125, -0.734375},
+              --shift = {0.078125, -0.734375},
               apply_runtime_tint = true,
               hr_version = {
-                filename = "__base__/graphics/entity/destroyer-robot/hr-destroyer-robot-mask.png",
+                filename = "__Advanced-Atomics__/graphics/entity/nukebot_mask.png",
                 priority = "high",
                 line_length = 32,
-                width = 52,
-                height = 42,
+                width =64,
+                height = 50,
                 frame_count = 1,
                 direction_count = 32,
-                shift = util.by_pixel(2.5, -23),
+                --shift = util.by_pixel(2.5, -23),
                 apply_runtime_tint = true,
-                scale = 0.5
+                --scale = 0.5
               }
             }
-          }
+          } 
         },
         shadow_in_motion =
         {
-          filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot-shadow.png",
+          filename = "__Advanced-Atomics__/graphics/entity/nukebot_shadow.png",
           priority = "high",
           line_length = 32,
-          width = 48,
-          height = 32,
+          width = 64,
+          height = 51,
           frame_count = 1,
           direction_count = 32,
-          shift = {0.78125, 0},
+          --shift = {0.78125, 0},
           hr_version = {
             filename = "__base__/graphics/entity/destroyer-robot/hr-destroyer-robot-shadow.png",
             priority = "high",
             line_length = 32,
-            width = 108,
-            height = 66,
+            width = 64,
+            height = 51,
             frame_count = 1,
             direction_count = 32,
-            shift = util.by_pixel(23.5, 1),
-            scale = 0.5
+            --shift = util.by_pixel(23.5, 1),
+            --scale = 0.5
           }
         }
       },
