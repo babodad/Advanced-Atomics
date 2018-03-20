@@ -50,6 +50,55 @@ data:extend(
 		result = "cluster-artillery-shell"
 	},
 
+		-- Napalm Shell
+
+	{
+		type = "ammo",
+		name = "napalm-artillery-shell",
+		icon = "__Advanced-Atomics__/graphics/icons/uranium-artillery-shell.png",
+		icon_size = 32,
+		flags = {"goes-to-main-inventory"},
+		ammo_type =
+		{
+		  category = "artillery-shell",
+		  target_type = "position",
+		  action =
+		  {
+			type = "direct",
+			action_delivery =
+			{
+			  type = "artillery",
+			  projectile = "napalm-artillery-projectile",
+			  starting_speed = 1,
+			  direction_deviation = 0,
+			  range_deviation = 0,
+			  source_effects =
+			  {
+				type = "create-explosion",
+				entity_name = "artillery-cannon-muzzle-flash"
+			  },
+			}
+		  },
+		},
+		subgroup = "ammo",
+		order = "d[explosive-cannon-shell]-d[artillery]y",
+		stack_size = 1
+	},
+
+	{
+		type = "recipe",
+		name = "napalm-artillery-shell",
+		enabled = true,
+		energy_required = 30,
+		ingredients =
+		{
+			{"explosive-uranium-cannon-shell", 8},
+			{"explosives", 12},
+			{"radar", 1}
+		},
+		result = "napalm-artillery-shell"
+	},
+
 		-- Nukebot Capsule
 
 		{

@@ -101,7 +101,7 @@ data:extend(
                 {
                   type = "area",
                   target_entities = false,
-                  repeat_count = 200,
+                  repeat_count = 200, --1000
                   radius = 5,
                   action_delivery =
                   {
