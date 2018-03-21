@@ -135,8 +135,8 @@ data:extend(
                 priority = "high",
                 line_length = 32,
                 width = 64,
-                height = 50,
-                y = 50,
+                height = 51,
+                y = 51,
                 frame_count = 1,
                 direction_count = 32,
                 --shift = util.by_pixel(2.5, -17.25),
@@ -181,11 +181,11 @@ data:extend(
           direction_count = 32,
           --shift = {0.78125, 0},
           hr_version = {
-            filename = "__Advanced-Atomics__/graphics/entity/nukebot_mask.pngg",
+            filename = "__Advanced-Atomics__/graphics/entity/nukebot_shadow.png",
             priority = "high",
             line_length = 32,
             width = 64,
-            height = 50,
+            height = 51,
             frame_count = 1,
             direction_count = 32,
             --shift = util.by_pixel(23.5, 1),
@@ -253,7 +253,7 @@ data:extend(
           direction_count = 32,
           --shift = {0.78125, 0},
           hr_version = {
-            filename = "__base__/graphics/entity/destroyer-robot/hr-destroyer-robot-shadow.png",
+            filename = "__Advanced-Atomics__/graphics/entity/nukebot_shadow.png",
             priority = "high",
             line_length = 32,
             width = 64,
@@ -415,7 +415,7 @@ data:extend(
             count = 8,
             hr_version =
             {
-              picture = "__Advanced-Atomics__/graphics/entity/hr-refined-concrete.png",
+              picture = "__Advanced-Atomics__/graphics/entity/hr-uranium-concrete.png",
               count = 8,
               scale = 0.5
             },

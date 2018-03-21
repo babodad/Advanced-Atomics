@@ -226,10 +226,10 @@ data:extend(
 data:extend(
 {
 
-	--- Cluster projectile
+	--- Nade projectile
 	{
 		type = "artillery-projectile",
-		name = "cluster-artillery-projectile",
+		name = "nade-artillery-projectile",
 		flags = {"not-on-map"},
 		acceleration = 0,
 		direction_only = true,
@@ -320,7 +320,7 @@ data:extend(
 							
 			{
 				type = "cluster",
-				cluster_count = 40,
+				cluster_count = 30,
 				distance = 22,
 				distance_deviation = 4,
 				action_delivery =
@@ -348,7 +348,7 @@ data:extend(
 			},
 			{
 				type = "cluster",
-				cluster_count = 5,
+				cluster_count = 4,
 				distance = 10,
 				distance_deviation = 4,
 				action_delivery =
@@ -386,6 +386,128 @@ data:extend(
 			priority = "high"
 		},
 	},
+
+		-- Cluster projectile
+
+		{
+			type = "artillery-projectile",
+			name = "cluster-artillery-projectile",
+			flags = {"not-on-map"},
+			acceleration = 0,
+			direction_only = true,
+			reveal_map = true,
+			map_color = {r=1, g=1, b=0},
+			picture =
+			{
+				filename = "__Advanced-Atomics__/graphics/entity/artillery-projectile/hr-uranium-shell.png",
+				width = 64,
+				height = 64,
+				scale = 0.5,
+			},
+			shadow =
+			{
+				filename = "__base__/graphics/entity/artillery-projectile/hr-shell-shadow.png",
+				width = 64,
+				height = 64,
+				scale = 0.5,
+			},
+			chart_picture =
+			{
+				filename = "__Advanced-Atomics__/graphics/entity/artillery-projectile/uranium-artillery-shoot-map-visualization.png",
+				flags = { "icon" },
+				frame_count = 1,
+				width = 64,
+				height = 64,
+				priority = "high",
+				scale = 0.25,
+			},
+			action =
+			{
+				type = "direct",
+				action_delivery =
+				{
+				type = "instant",
+				target_effects =
+				{
+					{
+					type = "nested-result",
+					action =
+					{
+						type = "area",
+						radius = 25.0,
+						action_delivery =
+						{
+						type = "instant",
+						target_effects =
+						{
+							{
+							type = "damage",
+							damage = {amount = 200 , type = "physical"}
+							},
+							{
+							type = "damage",
+							damage = {amount = 200 , type = "explosion"}
+							},
+							{
+								type = "create-entity",
+								entity_name = "uranium-cannon-shell-explosion"
+							},
+							{
+								type = "destroy-cliffs",
+								radius = 10.0,
+								explosion = "explosion"
+							},
+						}
+						}
+					}
+					},
+					{
+					type = "create-trivial-smoke",
+					smoke_name = "artillery-smoke",
+					initial_height = 0,
+					speed_from_center = 0.05,
+					speed_from_center_deviation = 0.005,
+					offset_deviation = {{-4, -4}, {4, 4}},
+					max_radius = 3.5,
+					repeat_count = 4 * 4 * 15
+					},
+					{
+					type = "create-entity",
+					entity_name = "big-artillery-explosion"
+					},
+					{
+					type = "show-explosion-on-chart",
+					scale = 8/32,
+					}
+				}
+				}
+			},
+			final_action =
+			{
+				type = "direct",
+				action_delivery =
+				{
+				type = "instant",
+				target_effects =
+				{
+					{
+					type = "create-entity",
+					entity_name = "small-scorchmark",
+					check_buildability = true
+					}
+				}
+				}
+			},
+			animation =
+			{
+				filename = "__base__/graphics/entity/bullet/bullet.png",
+				frame_count = 1,
+				width = 3,
+				height = 50,
+				priority = "high"
+			},
+		},
+
 
 		-- Napalm Projectile
 		
@@ -435,28 +557,23 @@ data:extend(
 				action =
 				{
 					type = "area",
-					radius = 10.0,
+					radius = 20.0,
 					action_delivery =
 					{
 					type = "instant",
 					target_effects =
 					{
 						{
-						type = "damage",
-						damage = {amount = 400 , type = "fire"}
-						},
-						{
-						type = "damage",
-						damage = {amount = 200 , type = "explosion"}
-						},
-						{
-							type = "create-entity",
-							entity_name = "uranium-cannon-shell-explosion"
-						},
+							type = "create-fire",
+							entity_name = "fire-flame",
+							initial_ground_flame_count = 20,
+			  			},
 					}
 					}
-				}
 				},
+
+				}
+			},
 				
 				{
 				type = "create-trivial-smoke",
@@ -465,7 +582,7 @@ data:extend(
 				speed_from_center = 0.05,
 				speed_from_center_deviation = 0.005,
 				offset_deviation = {{-4, -4}, {4, 4}},
-				max_radius = 3.5,
+				max_radius = 10.5,  --3
 				repeat_count = 4 * 4 * 15
 				},
 				{
@@ -477,11 +594,56 @@ data:extend(
 				scale = 8/32,
 				}
 			}
-			}
-		},
-							
-	
+			},
+
+			{
+				type = "area",
+				radius = 5.0,
+				action_delivery =
+				{
+				  type = "instant",
+				  target_effects =
+				{
+					{
+						type = "damage",
+						damage = {amount = 100 , type = "physical"}
+					},
+					{
+					type = "damage",
+					damage = {amount = 300 , type = "fire"}
+					},
+					{
+					type = "damage",
+					damage = {amount = 200 , type = "explosion"}
+					},
+					{
+						type = "create-entity",
+						entity_name = "uranium-cannon-shell-explosion"
+					},
+				}
+				}
+			},
 			
+			{
+				type = "area",
+				radius = 20.0,
+				action_delivery =
+				{
+				  type = "instant",
+				  target_effects =
+				  {
+					{
+					  type = "create-sticker",
+					  sticker = "fire-sticker"
+					},
+					{
+					  type = "damage",
+					  damage = { amount = 20, type = "fire" },
+					  apply_damage_to_trees = true
+					}
+				  }
+				}
+			}
 			
 		},
 		final_action =
