@@ -104,7 +104,7 @@ data:extend(
 		{
 			type = "capsule",
 			name = "nukebot-capsule",
-			icon = "__base__/graphics/icons/destroyer.png",
+			icon = "__Advanced-Atomics__/graphics/icons/nukebot.png",
 			icon_size = 32,
 			flags = {"goes-to-quickbar"},
 			capsule_action =

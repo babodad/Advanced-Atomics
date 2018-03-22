@@ -678,7 +678,7 @@ data:extend(
 		type = "projectile",
 		name = "nukebot-capsule",
 		flags = {"not-on-map"},
-		acceleration = 0.005,
+		acceleration = 0.004,
 		action =
 		{
 		  type = "direct",
@@ -700,19 +700,19 @@ data:extend(
 		animation = {
 		  layers = {
 			{
-			  filename = "__base__/graphics/entity/combat-robot-capsule/destroyer-capsule.png",
+			  filename = "__Advanced-Atomics__/graphics/entity/nukebot-capsule.png",
 			  flags = { "no-crop" },
 			  frame_count = 1,
-			  width = 42,
-			  height = 34,
+			  width = 48,
+			  height = 36,
 			  priority = "high"
 			},
 			{
-			  filename = "__base__/graphics/entity/combat-robot-capsule/destroyer-capsule-mask.png",
+			  filename = "__Advanced-Atomics__/graphics/entity/nukebot-capsule-mask.png",
 			  flags = { "no-crop" },
 			  frame_count = 1,
-			  width = 42,
-			  height = 34,
+			  width = 48,
+			  height = 36,
 			  priority = "high",
 			  apply_runtime_tint = true,
 			},
@@ -720,11 +720,11 @@ data:extend(
 		},
 		shadow =
 		{
-		  filename = "__base__/graphics/entity/combat-robot-capsule/destroyer-capsule-shadow.png",
+		  filename = "__Advanced-Atomics__/graphics/entity/nukebot-capsule-shadow.png",
 		  flags = { "no-crop" },
 		  frame_count = 1,
-		  width = 48,
-		  height = 32,
+		  width = 50,
+		  height = 38,
 		  priority = "high"
 		},
 		smoke = capsule_smoke

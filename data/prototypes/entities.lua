@@ -6,7 +6,7 @@ data:extend(
 	{
         type = "combat-robot",
         name = "nukebot",
-        icon = "__base__/graphics/icons/destroyer.png",
+        icon = "__Advanced-Atomics__/graphics/icons/nukebot.png",
         icon_size = 32,
         flags = {"placeable-player", "player-creation", "placeable-off-grid", "not-on-map", "not-repairable"},
         resistances = { { type = "fire", percent = 50 } },
@@ -21,9 +21,10 @@ data:extend(
         speed = 0.02,
         follows_player = true,
         friction = 0.01,
-        range_from_player = 12.0, --6
+        range_from_player = 10.0, --6
         destroy_action =
         {
+         {
           type = "direct",
           action_delivery =
           {
@@ -34,6 +35,29 @@ data:extend(
                 entity_name = "uranium-cannon-shell-explosion"
             }
           }
+          }, 
+
+          {
+            type = "area",
+            radius = 3.0,
+            action_delivery =
+            {
+              type = "instant",
+              target_effects =
+            {
+              {
+                type = "damage",
+                damage = {amount = 50 , type = "physical"}
+              },
+              {
+              type = "damage",
+              damage = {amount = 250 , type = "explosion"}
+              },
+            }
+            }
+          }
+
+
         },
         attack_parameters =
         {
@@ -49,18 +73,18 @@ data:extend(
                     category = "combat-robot-beam",
                     action =
             {
-                        {
-                        type = "direct",
+               {
+               type = "direct",
               action_delivery =
-              {
+               {
                 type = "beam",
                 beam = "electric-beam",
                 max_length = 18,
                 duration = 20,
                 source_offset = {0.15, -0.5},
-                        }
-                    },
-                    {
+               }
+              },
+          {
           type = "direct",
                 action_delivery =
           {
@@ -121,58 +145,58 @@ data:extend(
           layers =
           {
             {
-              filename = "__Advanced-Atomics__/graphics/entity/nukebot.png",
+              filename = "__Advanced-Atomics__/graphics/entity/nukebot/nukebot.png",
               priority = "high",
               line_length = 32,
               width = 64,
-              height = 51,
-              y = 51, --39
+              height = 52,
+              y = 52, --39
               frame_count = 1,
               direction_count = 32,
               --shift = {0.078125, -0.546875},
               hr_version = {
-                filename = "__Advanced-Atomics__/graphics/entity/nukebot.png",
+                filename = "__Advanced-Atomics__/graphics/entity/nukebot/hr-nukebot.png",
                 priority = "high",
                 line_length = 32,
-                width = 64,
-                height = 51,
-                y = 51,
+                width = 128,
+                height = 104,
+                y = 102,
                 frame_count = 1,
                 direction_count = 32,
                 --shift = util.by_pixel(2.5, -17.25),
-                --scale = 0.5
+                scale = 0.5
               }
             },
             {
-              filename = "__Advanced-Atomics__/graphics/entity/nukebot_mask.png",
+              filename = "__Advanced-Atomics__/graphics/entity/nukebot/nukebot_mask.png",
               priority = "high",
               line_length = 32,
               width = 64,
-              height = 50,
-              y = 50,
+              height = 52,
+              y = 52,
               frame_count = 1,
               direction_count = 32,
               --shift = {0.078125, -0.734375},
               apply_runtime_tint = true,
               hr_version = {
-                filename = "__Advanced-Atomics__/graphics/entity/nukebot_mask.png",
+                filename = "__Advanced-Atomics__/graphics/entity/nukebot/hr-nukebot_mask.png",
                 priority = "high",
                 line_length = 32,
-                width = 64,
-                height = 50,
-                y = 50,
+                width = 128,
+                height = 104,
+                y = 104,
                 frame_count = 1,
                 direction_count = 32,
                 --shift = util.by_pixel(2.5, -23),
                 apply_runtime_tint = true,
-                --scale = 0.5
+                scale = 0.5
               }
             },
           } 
         },
         shadow_idle =
         {
-          filename = "__Advanced-Atomics__/graphics/entity/nukebot_shadow.png",
+          filename = "__Advanced-Atomics__/graphics/entity/nukebot/nukebot_shadow.png",
           priority = "high",
           line_length = 32,
           width = 64,
@@ -181,15 +205,15 @@ data:extend(
           direction_count = 32,
           --shift = {0.78125, 0},
           hr_version = {
-            filename = "__Advanced-Atomics__/graphics/entity/nukebot_shadow.png",
+            filename = "__Advanced-Atomics__/graphics/entity/nukebot/hr-nukebot_shadow.png",
             priority = "high",
             line_length = 32,
-            width = 64,
-            height = 51,
+            width = 128,
+            height = 103,
             frame_count = 1,
             direction_count = 32,
             --shift = util.by_pixel(23.5, 1),
-            --scale = 0.5
+            scale = 0.5
           }
         },
         in_motion =
@@ -197,54 +221,54 @@ data:extend(
           layers =
           {
             {
-              filename = "__Advanced-Atomics__/graphics/entity/nukebot.png",
+              filename = "__Advanced-Atomics__/graphics/entity/nukebot/nukebot.png",
               priority = "high",
               line_length = 32,
               width = 64,
-              height = 51,
+              height = 52,
               frame_count = 1,
               direction_count = 32,
               --shift = {0.078125, -0.546875},
               hr_version = {
-                filename = "__Advanced-Atomics__/graphics/entity/nukebot.png",
+                filename = "__Advanced-Atomics__/graphics/entity/nukebot/hr-nukebot.png",
                 priority = "high",
                 line_length = 32,
-                width = 64,
-                height = 51,
+                width = 128,
+                height = 104,
                 frame_count = 1,
                 direction_count = 32,
                 --shift = util.by_pixel(2.5, -17.25),
-               -- scale = 0.5
+                scale = 0.5
               }
             },
             {
-              filename = "__Advanced-Atomics__/graphics/entity/nukebot_mask.png",
+              filename = "__Advanced-Atomics__/graphics/entity/nukebot/nukebot_mask.png",
               priority = "high",
               line_length = 32,
               width = 64,
-              height = 50,
+              height = 52,
               frame_count = 1,
               direction_count = 32,
               --shift = {0.078125, -0.734375},
               apply_runtime_tint = true,
               hr_version = {
-                filename = "__Advanced-Atomics__/graphics/entity/nukebot_mask.png",
+                filename = "__Advanced-Atomics__/graphics/entity/nukebot/hr-nukebot_mask.png",
                 priority = "high",
                 line_length = 32,
-                width =64,
-                height = 50,
+                width =128,
+                height = 104,
                 frame_count = 1,
                 direction_count = 32,
                 --shift = util.by_pixel(2.5, -23),
                 apply_runtime_tint = true,
-                --scale = 0.5
+                scale = 0.5
               }
             }
           } 
         },
         shadow_in_motion =
         {
-          filename = "__Advanced-Atomics__/graphics/entity/nukebot_shadow.png",
+          filename = "__Advanced-Atomics__/graphics/entity/nukebot/nukebot_shadow.png",
           priority = "high",
           line_length = 32,
           width = 64,
@@ -253,15 +277,15 @@ data:extend(
           direction_count = 32,
           --shift = {0.78125, 0},
           hr_version = {
-            filename = "__Advanced-Atomics__/graphics/entity/nukebot_shadow.png",
+            filename = "__Advanced-Atomics__/graphics/entity/nukebot/hr-nukebot_shadow.png",
             priority = "high",
             line_length = 32,
-            width = 64,
-            height = 51,
+            width = 128,
+            height = 103,
             frame_count = 1,
             direction_count = 32,
             --shift = util.by_pixel(23.5, 1),
-            --scale = 0.5
+            scale = 0.5
           }
         }
       },
