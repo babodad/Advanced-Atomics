@@ -281,11 +281,11 @@ data:extend(
 					{
 						{
 						type = "damage",
-						damage = {amount = 400 , type = "physical"}
+						damage = {amount = 100 , type = "physical"}
 						},
 						{
 						type = "damage",
-						damage = {amount = 400 , type = "explosion"}
+						damage = {amount = 200 , type = "explosion"}
 						},
 						{
 							type = "create-entity",
@@ -334,7 +334,7 @@ data:extend(
 			},
 			{
 				type = "cluster",
-				cluster_count = 20,
+				cluster_count = 18,
 				distance = 18,
 				distance_deviation = 4,
 				action_delivery =
@@ -349,7 +349,7 @@ data:extend(
 			{
 				type = "cluster",
 				cluster_count = 4,
-				distance = 10,
+				distance = 8,
 				distance_deviation = 4,
 				action_delivery =
 				{
@@ -432,34 +432,21 @@ data:extend(
 					{
 					type = "nested-result",
 					action =
-					{
-						type = "area",
-						radius = 25.0,
-						action_delivery =
-						{
-						type = "instant",
-						target_effects =
-						{
+					 {
+							type = "cluster",
+							cluster_count = 20,
+							distance = 22,
+							distance_deviation = 6,
+							action_delivery =
 							{
-							type = "damage",
-							damage = {amount = 200 , type = "physical"}
-							},
-							{
-							type = "damage",
-							damage = {amount = 200 , type = "explosion"}
-							},
-							{
-								type = "create-entity",
-								entity_name = "uranium-cannon-shell-explosion"
-							},
-							{
-								type = "destroy-cliffs",
-								radius = 10.0,
-								explosion = "explosion"
-							},
-						}
-						}
-					}
+								type = "projectile",
+								projectile = "explosive-uranium-cannon-projectile",
+								direction_deviation = 0.8,
+								starting_speed = 0.3,
+								starting_speed_deviation = 0.2
+							}
+						
+					 }
 					},
 					{
 					type = "create-trivial-smoke",
@@ -566,7 +553,7 @@ data:extend(
 						{
 							type = "create-fire",
 							entity_name = "fire-flame",
-							initial_ground_flame_count = 20,
+							initial_ground_flame_count = 30,
 			  			},
 					}
 					}
@@ -582,7 +569,7 @@ data:extend(
 				speed_from_center = 0.05,
 				speed_from_center_deviation = 0.005,
 				offset_deviation = {{-4, -4}, {4, 4}},
-				max_radius = 10.5,  --3
+				max_radius = 9.5,  --3
 				repeat_count = 4 * 4 * 15
 				},
 				{
@@ -626,7 +613,7 @@ data:extend(
 			
 			{
 				type = "area",
-				radius = 20.0,
+				radius = 22.0,
 				action_delivery =
 				{
 				  type = "instant",

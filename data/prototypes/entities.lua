@@ -1,5 +1,244 @@
+function nod_turret_extension(inputs)
+  return
+  {
+    filename = "__Advanced-Atomics__/graphics/entity/obelisk/nod-turret-start.png",
+    priority = "medium",
+    width = 132,
+    height = 106,
+    frame_count = inputs.frame_count and inputs.frame_count or 15,
+    line_length = inputs.line_length and inputs.line_length or 0,
+    run_mode = inputs.run_mode and inputs.run_mode or "forward",
+    axially_symmetrical = false,
+    direction_count = 4,
+    --shift = {-0.03125, -0.984375}
+  }
+  end
+  
+  function nod_turret_extension_shadow(inputs)
+  return
+  {
+    filename = "__Advanced-Atomics__/graphics/entity/obelisk/laser-turret-gun-start-shadow.png",
+    width = 92,
+    height = 50,
+    frame_count = inputs.frame_count and inputs.frame_count or 15,
+    line_length = inputs.line_length and inputs.line_length or 0,
+    run_mode = inputs.run_mode and inputs.run_mode or "forward",
+    axially_symmetrical = false,
+    direction_count = 4,
+    draw_as_shadow = true,
+    shift = {1.375, 0},
+  }
+  end
+  
+  function nod_turret_extension_mask(inputs)
+  return
+  {
+    filename = "__Advanced-Atomics__/graphics/entity/obelisk/nod-turret-start-mask.png",
+    flags = { "mask" },
+    width = 132,
+    height = 107,
+    frame_count = inputs.frame_count and inputs.frame_count or 15,
+    line_length = inputs.line_length and inputs.line_length or 0,
+    run_mode = inputs.run_mode and inputs.run_mode or "forward",
+    axially_symmetrical = false,
+    apply_runtime_tint = true,
+    direction_count = 4,
+    --shift = {-0.015625, -1.26563},
+  }
+  end
+
 data:extend(
   {
+
+      -- to be moved prep for turret
+
+      {
+        type = "item",
+        name = "nod-turret",
+        icon = "__base__/graphics/icons/laser-turret.png",
+        icon_size = 32,
+        flags = {"goes-to-quickbar"},
+        subgroup = "defensive-structure",
+        order = "b[turret]-c[laser-turret]",
+        place_result = "nod-turret",
+        stack_size = 50
+      },
+
+      {
+        type = "recipe",
+        name = "nod-turret",
+        enabled = true,
+        energy_required = 20,
+        ingredients =
+        {
+          {"steel-plate", 20},
+          {"electronic-circuit", 20},
+          {"battery", 12}
+        },
+        result = "nod-turret"
+      },
+
+      
+
+      -- NOD Obelsik
+
+      {
+        type = "electric-turret",
+        name = "nod-turret",
+        icon = "__base__/graphics/icons/laser-turret.png",
+        icon_size = 32,
+        flags = { "placeable-player", "placeable-enemy", "player-creation"},
+        minable = { mining_time = 0.5, result = "laser-turret" },
+        max_health = 1000,
+        corpse = "medium-remnants",
+        collision_box = {{ -0.7, -0.7}, {0.7, 0.7}},
+        selection_box = {{ -1, -1}, {1, 1}},
+        rotation_speed = 0.01,
+        preparing_speed = 0.05,
+        dying_explosion = "medium-explosion",
+        folding_speed = 0.05,
+        energy_source =
+        {
+          type = "electric",
+          buffer_capacity = "801kJ",
+          input_flow_limit = "9600kW",
+          drain = "24kW",
+          usage_priority = "primary-input"
+        },
+       folded_animation =
+        {
+          layers =
+          {
+            nod_turret_extension{frame_count=1, line_length = 1},
+            nod_turret_extension_shadow{frame_count=1, line_length=1},
+            nod_turret_extension_mask{frame_count=1, line_length=1}
+          }
+        },
+        preparing_animation =
+        {
+          layers =
+          {
+            nod_turret_extension{},
+            nod_turret_extension_shadow{},
+            nod_turret_extension_mask{}
+          }
+        }, 
+        prepared_animation =
+        {
+          layers =
+          {
+            {
+              filename = "__Advanced-Atomics__/graphics/entity/obelisk/nod-turret.png",
+              line_length = 8,
+              width = 251,
+              height = 200,
+              frame_count = 1,
+              axially_symmetrical = false,
+              direction_count = 64,
+              --shift = {-0.03125, -1}
+              scale = 0.9
+            },
+            {
+              filename = "__Advanced-Atomics__/graphics/entity/obelisk/nod-turret-mask.png",
+              flags = { "mask" },
+              line_length = 8,
+              width = 251,
+              height = 200,
+              frame_count = 1,
+              axially_symmetrical = false,
+              apply_runtime_tint = true,
+              direction_count = 64,
+              --shift = {-0.03125, -1.3125},
+              scale = 0.9
+              
+            },
+            {
+              filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-shadow.png",
+              line_length = 8,
+              width = 88,
+              height = 52,
+              frame_count = 1,
+              axially_symmetrical = false,
+              direction_count = 64,
+              draw_as_shadow = true,
+              shift = {1.5, 0}
+            }
+          }
+        },
+        folding_animation =
+        {
+          layers =
+          {
+            laser_turret_extension{run_mode = "backward"},
+            laser_turret_extension_shadow{run_mode = "backward"},
+            laser_turret_extension_mask{run_mode = "backward"}
+          }
+        },
+        base_picture =
+        {
+          layers =
+          {
+            {
+              filename = "__Advanced-Atomics__/graphics/entity/obelisk/nod-turret-base.png",
+              --priority = "high",
+              width = 98,
+              height = 82,
+              axially_symmetrical = false,
+              direction_count = 1,
+              frame_count = 1,
+              --shift = {0.015625, 0.03125}
+            },
+            {
+              filename = "__Advanced-Atomics__/graphics/entity/obelisk/laser-turret-base-mask.png",
+              flags = { "mask" },
+              line_length = 1,
+              width = 54,
+              height = 46,
+              axially_symmetrical = false,
+              apply_runtime_tint = true,
+              direction_count = 1,
+              frame_count = 1,
+              shift = {-0.046875, -0.109375},
+            },
+          }
+        },
+        vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    
+        attack_parameters =
+        {
+          type = "projectile",
+          ammo_category = "electric",
+          cooldown = 20,
+          projectile_center = {-0.09375, -0.2},
+          projectile_creation_distance = 1.4,
+          range = 24,
+          damage_modifier = 4,
+          ammo_type =
+          {
+            type = "projectile",
+            category = "laser-turret",
+            energy_consumption = "800kJ",
+            action =
+            {
+              {
+                type = "direct",
+                action_delivery =
+                {
+                  {
+                    type = "projectile",
+                    projectile = "laser",
+                    starting_speed = 0.35
+                  }
+                }
+              }
+            }
+          },
+          sound = make_laser_sounds()
+        },
+        call_for_help_radius = 40
+      },
+
+
 
     	-- Nukebot
 
@@ -12,7 +251,7 @@ data:extend(
         resistances = { { type = "fire", percent = 50 } },
         subgroup="capsule",
         order="e-a-c",
-        max_health = 50,
+        max_health = 20,
         alert_when_damaged = false,
         collision_box = {{0, 0}, {0, 0}},
         selection_box = {{-0.5, -1.5}, {0.5, -0.5}},
@@ -37,7 +276,7 @@ data:extend(
           }
           }, 
 
-          {
+         {
             type = "area",
             radius = 3.0,
             action_delivery =
@@ -61,20 +300,20 @@ data:extend(
         },
         attack_parameters =
         {
-                type = "beam",
+          type = "beam",
           ammo_category = "combat-robot-beam",
-          cooldown = 180, --20
+          cooldown = 2000, --20
           projectile_center = {0, 1},
           projectile_creation_distance = 0.6,
           range = 18,
           --sound = make_light_gunshot_sounds(),
           ammo_type =
           {
-                    category = "combat-robot-beam",
-                    action =
-            {
-               {
-               type = "direct",
+          category = "combat-robot-beam",
+          action =
+          {
+             {
+              type = "direct",
               action_delivery =
                {
                 type = "beam",
@@ -83,11 +322,12 @@ data:extend(
                 duration = 20,
                 source_offset = {0.15, -0.5},
                }
-              },
-          {
-          type = "direct",
-                action_delivery =
-          {
+             }, 
+--[[
+           { 
+           type = "direct",
+            action_delivery =
+           { 
                 
             type = "instant",
             target_effects =
@@ -111,7 +351,7 @@ data:extend(
               },
               {
                 type = "damage",
-                            damage = {amount = 100, type = "explosion"},
+                            damage = {amount = 50, type = "explosion"},
                             
               },
               {
@@ -125,18 +365,20 @@ data:extend(
                 {
                   type = "area",
                   target_entities = false,
-                  repeat_count = 200, --1000
-                  radius = 5,
+                  repeat_count = 1, --1000
+                  radius = 3,
                   action_delivery =
                   {
                     type = "projectile",
-                    projectile = "atomic-bomb-wave",
+                    projectile = "explosive-uranium-cannon-projectile",
                     starting_speed = 0.1
                   }
                 }}
               }
             }
-          }
+          } --]]
+
+
             }
           }
         },
@@ -510,3 +752,4 @@ data:extend(
       },
 
 })
+
