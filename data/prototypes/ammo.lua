@@ -99,6 +99,34 @@ data:extend(
 		result = "napalm-artillery-shell"
 	},
 
+		-- Marvin
+
+		{
+			type = "item",
+			name = "marvin",
+			icon_size = 32,
+			icon = "__Advanced-Atomics__/graphics/icons/nukebot.png",
+			flags = {"goes-to-quickbar"},
+			order = "z[marvin]",
+			subgroup = "capsule",
+			place_result = "marvin",
+			stack_size = 25
+	},
+
+	{
+		type = "recipe",
+		name = "marvin",
+		enabled = true,
+		energy_required = 15,
+		ingredients =
+		{
+			{"distractor-capsule", 4},
+			{"speed-module", 1}
+		},
+		result = "marvin"
+	},
+
+
 		-- Nukebot Capsule
 
 		{

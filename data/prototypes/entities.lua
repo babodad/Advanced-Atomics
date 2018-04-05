@@ -150,7 +150,7 @@ data:extend(
               direction_count = 64,
               --shift = {-0.03125, -1.3125},
               scale = 0.9
-              
+
             },
             {
               filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-shadow.png",
@@ -181,8 +181,9 @@ data:extend(
             {
               filename = "__Advanced-Atomics__/graphics/entity/obelisk/nod-turret-base.png",
               --priority = "high",
-              width = 98,
-              height = 82,
+              width = 250,
+              
+              height = 200,
               axially_symmetrical = false,
               direction_count = 1,
               frame_count = 1,
@@ -238,6 +239,225 @@ data:extend(
         call_for_help_radius = 40
       },
 
+      -- Marvin
+{
+     type = "unit",
+    name = "marvin",
+    icon_size = 32,
+    icon = "__Advanced-Atomics__/graphics/icons/nukebot.png",
+    flags = {"placeable-player", "player-creation", "placeable-off-grid"},
+    subgroup="creatures",
+    order="e-a-b-d",
+    has_belt_immunity = true,
+    max_health = 300,
+    alert_when_damaged = false,
+    healing_per_tick = 0.02,
+	friendly_map_color = green,
+  collision_box = {{0, 0}, {0, 0}},
+  selection_box = {{-0.5, -1.5}, {0.5, -0.5}},
+    sticker_box = {{-0.5, -0.5}, {0.5, 0.5}},
+	vision_distance = 30,
+    movement_speed = 0.18,
+--	minable = {hardness = 0.1, mining_time = 0.1, result = "terminator"},
+	pollution_to_join_attack = 0.0,
+	distraction_cooldown = 0,
+    distance_per_frame =  0.05,
+	dying_explosion = "medium-explosion",
+	resistances =
+    {
+      {
+        type = "physical",
+        decrease = 1,
+        percent = 80
+      },
+      {
+        type = "explosion",
+        decrease = 20,
+        percent = 90
+      },
+      {
+        type = "acid",
+        decrease = 5,
+        percent = 85
+      },
+	  {
+        type = "laser",
+        decrease = 5,
+        percent = 35
+      },
+	  {
+        type = "fire",
+		decrease = 5,
+        percent = 95
+      }
+    },
+    destroy_action =
+    {
+      type = "direct",
+      action_delivery =
+      {
+        type = "instant",
+        source_effects =
+        {
+		      {
+            type = "create-entity",
+            entity_name = "explosion"
+          },
+          {
+            type = "nested-result",
+            action =
+            {
+              type = "area",
+              perimeter = 50,
+              action_delivery =
+              {
+                type = "instant",
+                target_effects =
+                {
+                  {
+                    type = "damage",
+                    damage = {amount = 100, type = "explosion"}
+                  },
+                  {
+                    type = "create-entity",
+                    entity_name = "explosion"
+                  },
+				         {
+				        	type = "create-entity",
+				        	entity_name = "small-scorchmark",
+			        		check_buildability = true
+				         }
+                }
+              }
+            }
+		  },
+      }
+	  }
+ 
+    },
+	attack_parameters =
+    {
+      
+	  type = "projectile",
+      ammo_category = "bullet",
+      cooldown = 10,
+      projectile_center = {0, 0.4},
+      projectile_creation_distance = 1.5,
+      range = 15,
+      --sound = make_laser_sounds(1),
+	  animation =
+		 {
+			  filename = "__Advanced-Atomics__/graphics/entity/nukebot/nukebot.png",
+			  priority = "high",
+			  width = 64,
+			  height = 52,
+			  direction_count = 2,
+			  frame_count = 32,
+			  animation_speed = 0.15,
+			  shift = {0, 0}
+		 },
+      ammo_type =
+      {
+        type = "projectile",
+        category = "bullet",
+        --energy_consumption = "0W",
+        --projectile = "laser-dual",
+        --speed = 2,
+        action =
+        {
+          {
+            type = "direct",
+            action_delivery =
+            {
+              type = "instant",
+              source_effects =
+              {
+                {
+                  type = "nested-result",
+                  affects_target = true,
+                  action = 
+                  {
+                    {
+                      type = "area",
+                      radius = 6.0,
+                      action_delivery =
+                      {
+                        type = "instant",
+                        target_effects =
+                      {
+                        {
+                          type = "damage",
+                          damage = {amount = 50 , type = "physical"}
+                        },
+                        {
+                        type = "damage",
+                        damage = {amount = 250 , type = "explosion"}
+                        },
+                      }
+                      }
+                    }
+                  },
+                },
+
+                {
+                  type = "create-entity",
+                  entity_name = "uranium-cannon-shell-explosion"
+                },
+
+                {
+                  type = "damage",
+                  damage = { amount = 200, type = "explosion"}
+                }                
+              },
+              target_effects =
+              {
+               {
+                type = "damage",
+                damage = { amount = 1 , type = "physical"}
+                }
+              } 
+              },
+
+            {
+              {
+                type = "projectile",
+                projectile = "bullet",
+                starting_speed = 1
+              }
+            },
+
+
+          }
+        }
+       }
+	  
+	 
+    },
+	idle =
+	{
+	  filename = "__Advanced-Atomics__/graphics/entity/nukebot/nukebot.png",
+	  priority = "very-low",
+	  width = 64,
+	  height = 52,
+	  direction_count = 2,
+	  frame_count = 32,
+	  animation_speed = 0.5,
+	  shift = {0, 0}
+	},
+	run_animation =
+	{
+	  filename = "__Advanced-Atomics__/graphics/entity/nukebot/nukebot.png",
+	  priority = "high",
+	  width = 64,
+	  height = 52,
+	  direction_count = 2,
+	  frame_count = 32,
+	  animation_speed = 0.5,
+	  shift = {0, 0}
+	}
+},
+
+
 
 
     	-- Nukebot
@@ -260,7 +480,7 @@ data:extend(
         speed = 0.02,
         follows_player = true,
         friction = 0.01,
-        range_from_player = 10.0, --6
+        range_from_player = 12.0, --6
         destroy_action =
         {
          {
@@ -278,7 +498,7 @@ data:extend(
 
          {
             type = "area",
-            radius = 3.0,
+            radius = 4.0,
             action_delivery =
             {
               type = "instant",
@@ -300,29 +520,72 @@ data:extend(
         },
         attack_parameters =
         {
-          type = "beam",
-          ammo_category = "combat-robot-beam",
-          cooldown = 2000, --20
+          type = "projectile",
+          ammo_category = "bullet",
+          cooldown = 10,
           projectile_center = {0, 1},
-          projectile_creation_distance = 0.6,
-          range = 18,
+          projectile_creation_distance = 0.5,
+          range = 3,
           --sound = make_light_gunshot_sounds(),
           ammo_type =
           {
-          category = "combat-robot-beam",
+          category = "bullet",
           action =
           {
              {
               type = "direct",
               action_delivery =
+              {
+              type = "instant",
+              source_effects =
+              {
+                {
+                  type = "nested-result",
+                  affects_target = true,
+                  action = 
+                  {
+                    {
+                      type = "area",
+                      radius = 6.0,
+                      action_delivery =
+                      {
+                        type = "instant",
+                        target_effects =
+                      {
+                        {
+                          type = "damage",
+                          damage = {amount = 50 , type = "physical"}
+                        },
+                        {
+                        type = "damage",
+                        damage = {amount = 250 , type = "explosion"}
+                        },
+                      }
+                      }
+                    }
+                  },
+                },
+
+                {
+                  type = "create-entity",
+                  entity_name = "uranium-cannon-shell-explosion"
+                },
+
+                {
+                  type = "damage",
+                  damage = { amount = 200, type = "explosion"}
+                }                
+              },
+              target_effects =
+              {
                {
-                type = "beam",
-                beam = "electric-beam",
-                max_length = 18,
-                duration = 20,
-                source_offset = {0.15, -0.5},
-               }
+                type = "damage",
+                damage = { amount = 1 , type = "physical"}
+                }
+              } 
+              }
              }, 
+
 --[[
            { 
            type = "direct",

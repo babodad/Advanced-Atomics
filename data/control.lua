@@ -1,5 +1,5 @@
 VERSION = "0.1.7"
-
+--[[
 function makeBoom(entity)
     local damage = 300
     local radius = 6
@@ -27,5 +27,15 @@ function onDie(event)
     end
 end
 
-script.on_event(defines.events.on_entity_died, onDie)
+function onAttack(event)
+    local ent = event.entity
 
+  
+end
+
+
+script.on_event(defines.events.on_entity_died, onDie)
+script.on_event(defines.events.on_entity_damaged, onAttack)
+
+
+]]
