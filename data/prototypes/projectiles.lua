@@ -698,7 +698,228 @@ data:extend(
         starting_frame_speed_deviation = 5
       }
     }
-  },
+	},
+	
+	-- Nukebot Capsule
+
+	{
+		type = "projectile",
+		name = "nukebot-capsule",
+		flags = {"not-on-map"},
+		acceleration = 0.004,
+		action =
+		{
+		  type = "direct",
+		  action_delivery =
+		  {
+			type = "instant",
+			target_effects =
+			{
+			  type = "create-entity",
+			  show_in_tooltip = true,
+			  entity_name = "nukebot",
+			  -- offsets = {{-0.7, -0.7},{-0.7, 0.7},{0.7, -0.7},{0.7, 0.7},{0, 0}}
+			  offsets = {{0, 0}}
+			}
+		  }
+		},
+		light = {intensity = 0.5, size = 4},
+		enable_drawing_with_mask = true,
+		animation = {
+		  layers = {
+			{
+			  filename = "__Advanced-Atomics__/graphics/entity/nukebot-capsule.png",
+			  flags = { "no-crop" },
+			  frame_count = 1,
+			  width = 48,
+			  height = 36,
+			  priority = "high"
+			},
+			{
+			  filename = "__Advanced-Atomics__/graphics/entity/nukebot-capsule-mask.png",
+			  flags = { "no-crop" },
+			  frame_count = 1,
+			  width = 48,
+			  height = 36,
+			  priority = "high",
+			  apply_runtime_tint = true,
+			},
+		  },
+		},
+		shadow =
+		{
+		  filename = "__Advanced-Atomics__/graphics/entity/nukebot-capsule-shadow.png",
+		  flags = { "no-crop" },
+		  frame_count = 1,
+		  width = 50,
+		  height = 38,
+		  priority = "high"
+		},
+		smoke = capsule_smoke
+		},
+		
+
+		--- Nade projectile
+	{
+		type = "artillery-projectile",
+		name = "nade-artillery-projectile",
+		flags = {"not-on-map"},
+		acceleration = 0,
+		direction_only = true,
+		reveal_map = true,
+		map_color = {r=0, g=1, b=1},
+		picture =
+		{
+			filename = "__Advanced-Atomics__/graphics/entity/artillery-projectile/hr-nadeshow-shell.png",
+			width = 64,
+			height = 64,
+			scale = 0.5,
+		},
+		shadow =
+		{
+			filename = "__base__/graphics/entity/artillery-projectile/hr-shell-shadow.png",
+			width = 64,
+			height = 64,
+			scale = 0.5,
+		},
+		chart_picture =
+		{
+			filename = "__Advanced-Atomics__/graphics/entity/artillery-projectile/uranium-artillery-shoot-map-visualization.png",
+			flags = { "icon" },
+			frame_count = 1,
+			width = 64,
+			height = 64,
+			priority = "high",
+			scale = 0.25,
+		},
+		action =
+		{
+			{
+			type = "direct",
+			action_delivery =
+			{
+			type = "instant",
+			target_effects =
+			{
+				{
+				type = "nested-result",
+				action =
+				{
+					type = "area",
+					radius = 6.0,
+					action_delivery =
+					{
+					type = "instant",
+					target_effects =
+					{
+						{
+						type = "damage",
+						damage = {amount = 100 , type = "physical"}
+						},
+						{
+						type = "damage",
+						damage = {amount = 200 , type = "explosion"}
+						},
+						{
+							type = "create-entity",
+							entity_name = "uranium-cannon-shell-explosion"
+						},
+					}
+					}
+				}
+				},
+				
+				{
+				type = "create-trivial-smoke",
+				smoke_name = "artillery-smoke",
+				initial_height = 0,
+				speed_from_center = 0.05,
+				speed_from_center_deviation = 0.005,
+				offset_deviation = {{-4, -4}, {4, 4}},
+				max_radius = 3.5,
+				repeat_count = 4 * 4 * 15
+				},
+				{
+				type = "create-entity",
+				entity_name = "big-artillery-explosion"
+				},
+				{
+				type = "show-explosion-on-chart",
+				scale = 8/32,
+				}
+			}
+			}
+		},
+							
+			{
+				type = "cluster",
+				cluster_count = 30,
+				distance = 22,
+				distance_deviation = 4,
+				action_delivery =
+				{
+					type = "projectile",
+					projectile = "uranium-grenade",
+					direction_deviation = 0.7,
+					starting_speed = 0.25,
+					starting_speed_deviation = 0.3
+				}
+			},
+			{
+				type = "cluster",
+				cluster_count = 18,
+				distance = 18,
+				distance_deviation = 4,
+				action_delivery =
+				{
+					type = "projectile",
+					projectile = "grenade",
+					direction_deviation = 0.7,
+					starting_speed = 0.25,
+					starting_speed_deviation = 0.3
+				}
+			},
+			{
+				type = "cluster",
+				cluster_count = 4,
+				distance = 8,
+				distance_deviation = 4,
+				action_delivery =
+				{
+					type = "projectile",
+					projectile = "cluster-grenade",
+					direction_deviation = 0.7,
+					starting_speed = 0.25,
+					starting_speed_deviation = 0.3
+				}
+			},
+		},
+		final_action =
+		{
+			type = "direct",
+			action_delivery =
+			{
+			type = "instant",
+			target_effects =
+			{
+				{
+				type = "create-entity",
+				entity_name = "small-scorchmark",
+				check_buildability = true
+				}
+			}
+			}
+		},
+		animation =
+		{
+			filename = "__base__/graphics/entity/bullet/bullet.png",
+			frame_count = 1,
+			width = 3,
+			height = 50,
+			priority = "high"
+		},
+	},
+
 })
 
 

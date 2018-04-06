@@ -336,10 +336,116 @@ data:extend(
 		{
 		  {"processing-unit", 20},
 		  {"explosives", 10},
-		  {"plutonium-239", 20}
+			{"plutonium-239", 20},
+			{"atomic-bomb", 1}
 		},
 		result = "plutonium-missile"
-	  },
+		},
+		
+		-- Nukebot Capsule
+
+		{
+			type = "capsule",
+			name = "nukebot-capsule",
+			icon = "__Advanced-Atomics__/graphics/icons/nukebot.png",
+			icon_size = 32,
+			flags = {"goes-to-quickbar"},
+			capsule_action =
+			{
+				type = "throw",
+				attack_parameters =
+				{
+					type = "projectile",
+					ammo_category = "capsule",
+					cooldown = 30,
+					projectile_creation_distance = 5.0, --0.6
+					range = 50, --25
+					ammo_type =
+					{
+						category = "capsule",
+						target_type = "position",
+						action =
+						{
+							type = "direct",
+							action_delivery =
+							{
+								type = "projectile",
+								projectile = "nukebot-capsule",
+								starting_speed = 0.3
+							}
+						}
+					}
+				}
+			},
+			subgroup = "capsule",
+			order = "g[nukebot-capsule]",
+			stack_size = 100
+		},	
+
+		{
+			type = "recipe",
+			name = "nukebot-capsule",
+			enabled = false,
+			energy_required = 20,
+			ingredients =
+			{
+				{"destroyer-capsule", 2},
+				{"speed-module", 2},
+				{"uranium-238", 4},
+			},
+			result = "nukebot-capsule"
+		},
+
+		--- Grenade Cluster Shell
+
+	{
+		type = "ammo",
+		name = "nade-artillery-shell",
+		icon = "__Advanced-Atomics__/graphics/icons/nade-artillery-shell.png",
+		icon_size = 32,
+		flags = {"goes-to-main-inventory"},
+		ammo_type =
+		{
+		  category = "artillery-shell",
+		  target_type = "position",
+		  action =
+		  {
+			type = "direct",
+			action_delivery =
+			{
+			  type = "artillery",
+			  projectile = "nade-artillery-projectile",
+			  starting_speed = 1,
+			  direction_deviation = 0,
+			  range_deviation = 0,
+			  source_effects =
+			  {
+				type = "create-explosion",
+				entity_name = "artillery-cannon-muzzle-flash"
+			  },
+			}
+		  },
+		},
+		subgroup = "ammo",
+		order = "d[explosive-cannon-shell]-d[artillery]y",
+		stack_size = 1
+	},
+
+	{
+		type = "recipe",
+		name = "nade-artillery-shell",
+		enabled = false,
+		energy_required = 30,
+		ingredients =
+		{
+			{"explosive-uranium-cannon-shell", 2},
+			{"explosives", 5},
+			{"cluster-grenade", 1},
+			{"grenade", 2},
+			{"uranium-grenade", 3}
+		},
+		result = "nade-artillery-shell"
+	},
 	  
 })
 

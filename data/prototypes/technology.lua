@@ -111,7 +111,7 @@ data:extend(
 		},
 		-- prerequisites = {"kovarex-enrichment-process"},
 		unit = {
-			count = 1000,
+			count = 2000,
 			ingredients = 
 			{
 				{"science-pack-1", 1},
@@ -194,6 +194,25 @@ table.insert(data.raw["technology"]["uranium-ammo"].effects,
 		recipe = "uranium-flamethrower-ammo"
 	}
 )
+table.insert(data.raw["technology"]["uranium-ammo"].effects,
+	{
+		type = "unlock-recipe",
+		recipe = "nade-artillery-shell"
+	}
+)
+table.insert(data.raw["technology"]["uranium-ammo"].effects,
+	{
+		type = "unlock-recipe",
+		recipe = "nukebot-capsule"
+	}
+)
+table.insert(data.raw["technology"]["uranium-ammo"].effects,
+	{
+		type = "unlock-recipe",
+		recipe = "uranium-concrete"
+	}
+)
+
 
 
 

@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.7
+Date: 0x. 0x. 2018        
+  Features:
+    - Added 
+    - Added uranium concrete
+    - Added Nadeshow shell
+  Balancing:
+    - Atomic bomb now required for plutonium Missile
+    - Incread research cost for plutonium research
+  Bugfixes:
+    - Fixed missing locale for gui element reach distance  
+---------------------------------------------------------------------------------------------------
 Version: 0.1.6
 Date: 03. 02. 2018        
   Features:
