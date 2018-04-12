@@ -486,7 +486,7 @@ data:extend(
         count = 8,
         hr_version =
         {
-          picture = "__Advanced-Atomics__/graphics/entity/hr-refined-concrete.png",
+          picture = "__Advanced-Atomics__/graphics/entity/hr-uranium-concrete.png",
           count = 8,
           scale = 0.5
         },

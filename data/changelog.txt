@@ -1,12 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.7
-Date: 0x. 0x. 2018        
+Date: 12. 04. 2018        
   Features:
-    - Added 
+    - Added U-Wing aka nukebot
     - Added uranium concrete
     - Added Nadeshow shell
   Balancing:
-    - Atomic bomb now required for plutonium Missile
+    - Plutonium now requires atomic bomb technology
     - Incread research cost for plutonium research
   Bugfixes:
     - Fixed missing locale for gui element reach distance  

@@ -106,7 +106,7 @@ data:extend(
 		  },
 		},
 		subgroup = "ammo",
-		order = "d[explosive-cannon-shell]-d[artillery]y",
+		order = "d[explosive-cannon-shell]-d[artillery]x",
 		stack_size = 1
 	},
 
@@ -336,8 +336,7 @@ data:extend(
 		{
 		  {"processing-unit", 20},
 		  {"explosives", 10},
-			{"plutonium-239", 20},
-			{"atomic-bomb", 1}
+			{"plutonium-239", 20}
 		},
 		result = "plutonium-missile"
 		},
@@ -390,13 +389,13 @@ data:extend(
 			ingredients =
 			{
 				{"destroyer-capsule", 2},
-				{"speed-module", 2},
-				{"uranium-238", 4},
+				{"explosives", 2},
+				{"uranium-235", 2},
 			},
 			result = "nukebot-capsule"
 		},
 
-		--- Grenade Cluster Shell
+		--- Nade Artillery Shell
 
 	{
 		type = "ammo",
@@ -438,11 +437,11 @@ data:extend(
 		energy_required = 30,
 		ingredients =
 		{
-			{"explosive-uranium-cannon-shell", 2},
-			{"explosives", 5},
+			{"artillery-shell", 1},
 			{"cluster-grenade", 1},
 			{"grenade", 2},
-			{"uranium-grenade", 3}
+			{"uranium-grenade", 3},
+			{"radar", 1}
 		},
 		result = "nade-artillery-shell"
 	},

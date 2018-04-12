@@ -719,7 +719,7 @@ data:extend(
 			  show_in_tooltip = true,
 			  entity_name = "nukebot",
 			  -- offsets = {{-0.7, -0.7},{-0.7, 0.7},{0.7, -0.7},{0.7, 0.7},{0, 0}}
-			  offsets = {{0, 0}}
+			  offsets = {{-2, -2},{2, 2}}
 			}
 		  }
 		},
@@ -806,7 +806,7 @@ data:extend(
 				action =
 				{
 					type = "area",
-					radius = 6.0,
+					radius = 4.0,
 					action_delivery =
 					{
 					type = "instant",
@@ -814,7 +814,7 @@ data:extend(
 					{
 						{
 						type = "damage",
-						damage = {amount = 100 , type = "physical"}
+						damage = {amount = 200 , type = "physical"}
 						},
 						{
 						type = "damage",
@@ -853,8 +853,8 @@ data:extend(
 							
 			{
 				type = "cluster",
-				cluster_count = 30,
-				distance = 22,
+				cluster_count = 18,
+				distance = 18,
 				distance_deviation = 4,
 				action_delivery =
 				{
@@ -867,8 +867,8 @@ data:extend(
 			},
 			{
 				type = "cluster",
-				cluster_count = 18,
-				distance = 18,
+				cluster_count = 24,
+				distance = 24,
 				distance_deviation = 4,
 				action_delivery =
 				{
