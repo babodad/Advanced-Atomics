@@ -206,15 +206,6 @@ table.insert(data.raw["technology"]["uranium-ammo"].effects,
 		recipe = "nukebot-capsule"
 	}
 )
-table.insert(data.raw["technology"]["uranium-ammo"].effects,
-	{
-		type = "unlock-recipe",
-		recipe = "uranium-concrete"
-	}
-)
-
-
-
 
 if AA.ENABLED["UraniumExtraction"] then
 	data:extend(
@@ -237,6 +228,10 @@ if AA.ENABLED["UraniumExtraction"] then
 					type = "unlock-recipe",
 					recipe = "iron2uranium"
 				},
+				{
+					type = "unlock-recipe",
+					recipe = "uranium-concrete"
+				}
 			},
 			prerequisites = {"nuclear-power", "coal-liquefaction"},
 			unit = {

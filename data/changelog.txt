@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.8
+Date: 13. 04. 2018
+  Balancing:
+    - Uranium Concrete requires Uranium Extraction instead of Uranium Ammo technology
+  Bugfixes:
+    - New recipes are now properly unlocked if required tech is already researched.
+---------------------------------------------------------------------------------------------------
 Version: 0.1.7
 Date: 12. 04. 2018        
   Features:
