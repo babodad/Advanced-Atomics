@@ -1,35 +1,5 @@
 data:extend(
 {
-	--- Uranium Axe (+mk2)
-	{
-		type = "technology",
-		name = "uranium-tools",
-		icon_size = 128,
-		icon = "__Advanced-Atomics__/graphics/technology/uranium-tools_128.png",
-		effects = {
-			{
-				type = "unlock-recipe",
-				recipe = "uranium-axe"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "uranium-axe-mk2"
-			}
-		},
-		prerequisites = {"nuclear-power"},
-		unit = {
-			count = 400,
-			ingredients = {
-				{"science-pack-1", 1},
-				{"science-pack-2", 1},
-				{"science-pack-3", 2},
-				{"production-science-pack", 3}
-			},
-			time = 42,			
-		},
-		order = "e-a-a"
-	},
-	
 	--- Uranium Armor
 	{
 		type = "technology",
@@ -51,11 +21,11 @@ data:extend(
 			count = 500,
 			ingredients = 
 			{
-				{"science-pack-1", 1},
-				{"science-pack-2", 1},
-				{"science-pack-3", 2},
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 2},
 				{"military-science-pack", 2},
-				{"high-tech-science-pack", 2}
+				{"utility-science-pack", 2}
 			},
 			time = 42			
 		},
@@ -75,10 +45,6 @@ data:extend(
 			{
 				type = "unlock-recipe",
 				recipe = "plutonium-nucleosynthesis"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "plutonium-axe"
 			},
 			{
 				type = "unlock-recipe",
@@ -114,11 +80,11 @@ data:extend(
 			count = 2000,
 			ingredients = 
 			{
-				{"science-pack-1", 1},
-				{"science-pack-2", 1},
-				{"science-pack-3", 2},
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 2},
 				{"military-science-pack", 2},
-				{"high-tech-science-pack", 3}
+				{"utility-science-pack", 3}
 			},
 			time = 42			
 		},
@@ -158,11 +124,11 @@ data:extend(
 			count = 1000,
 			ingredients = 
 			{
-				{"science-pack-1", 1},
-				{"science-pack-2", 1},
-				{"science-pack-3", 1},
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
 				{"military-science-pack", 2},
-				{"high-tech-science-pack", 2}
+				{"utility-science-pack", 2}
 			},
 			time = 42			
 		},
@@ -238,9 +204,9 @@ if AA.ENABLED["UraniumExtraction"] then
 				count = 400,
 				ingredients =
 				{
-					{"science-pack-1", 1},
-					{"science-pack-2", 1},
-					{"science-pack-3", 2},
+					{"automation-science-pack", 1},
+					{"logistic-science-pack", 1},
+					{"chemical-science-pack", 2},
 					{"production-science-pack", 3}
 				},
 				time = 42
@@ -252,11 +218,11 @@ end
 
 if AA.ENABLED["SSP4Plutonium"] then
 	data.raw["technology"]["plutonium"].unit.ingredients = {
-		{"science-pack-1", 1},
-		{"science-pack-2", 1},
-		{"science-pack-3", 2},
+		{"automation-science-pack", 1},
+		{"logistic-science-pack", 1},
+		{"chemical-science-pack", 2},
 		{"military-science-pack", 2},
-		{"high-tech-science-pack", 2},
+		{"utility-science-pack", 2},
 		{"space-science-pack", 3}
 	}
 end

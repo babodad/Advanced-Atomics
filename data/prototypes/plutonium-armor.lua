@@ -6,7 +6,7 @@ data:extend(
     name = "plutonium-armor",
     icon = "__Advanced-Atomics__/graphics/icons/plutonium-armor.png",
     icon_size = 32,
-    flags = {"goes-to-main-inventory"},
+    flags = {},
     resistances =
     {
       {

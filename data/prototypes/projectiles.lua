@@ -95,7 +95,7 @@ data:extend(
 
     shadow =
     {
-      filename = "__base__/graphics/entity/acid-projectile-purple/acid-projectile-purple-shadow.png",
+      filename = "__Advanced-Atomics__/graphics/entity/flamethrower-fire-stream/uranium-flamethrower-explosion.png",
       line_length = 5,
       width = 28,
       height = 16,
@@ -191,7 +191,7 @@ data:extend(
 
     shadow =
     {
-      filename = "__base__/graphics/entity/acid-projectile-purple/acid-projectile-purple-shadow.png",
+      filename = "__Advanced-Atomics__/graphics/entity/flamethrower-fire-stream/uranium-flamethrower-explosion.png",
       line_length = 5,
       width = 28,
       height = 16,
@@ -203,6 +203,7 @@ data:extend(
 
     particle =
     {
+      filename = "__Advanced-Atomics__/graphics/entity/flamethrower-fire-stream/uranium-flamethrower-explosion.png",
       filename = "__Advanced-Atomics__/graphics/entity/flamethrower-fire-stream/uranium-flamethrower-explosion.png",
       priority = "extra-high",
       width = 64,

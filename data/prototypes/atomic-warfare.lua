@@ -527,7 +527,7 @@ data:extend(
     name = "uranium-concrete",
     icon = "__Advanced-Atomics__/graphics/icons/uranium-concrete.png",
     icon_size = 32,
-    flags = {"goes-to-main-inventory"},
+    flags = {},
     subgroup = "terrain",
     order = "b[concrete]-d[uranium]",
     stack_size = 100,
