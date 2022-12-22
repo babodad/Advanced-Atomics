@@ -5,7 +5,7 @@ data:extend({
 		name = "uranium-axe",
 		icon = "__Advanced-Atomics__/graphics/icons/uranium-axe-mk1.png",
 		icon_size = 32,
-		flags = {"goes-to-quickbar"},
+		flags = {},
 		action =
 		{
 		  type="direct",
@@ -51,7 +51,7 @@ data:extend({
 		name = "uranium-axe-mk2",
 		icon = "__Advanced-Atomics__/graphics/icons/uranium-axe-mk2.png",
 		icon_size = 32,
-		flags = {"goes-to-quickbar"},
+		flags = {},
 		action =
 		{
 		  type="direct",
@@ -101,7 +101,7 @@ data:extend({
         name = "plutonium-axe",
         icon = "__Advanced-Atomics__/graphics/icons/plutonium-axe.png",
         icon_size = 32,
-        flags = {"goes-to-quickbar"},
+        flags = {},
         action =
         {
         type="direct",
