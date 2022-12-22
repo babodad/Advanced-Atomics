@@ -7,7 +7,7 @@ data:extend(
     --icons = {{icon = "__Advanced-Atomics__/graphics/icons/uranium-flamethrower-ammo.png", tint = {r = 0.1, g = 0.6, b = 0.1, a = 0.8}}},
 		icon = "__Advanced-Atomics__/graphics/icons/uranium-flamethrower-ammo.png",
 		icon_size = 32,
-    flags = {"goes-to-main-inventory"},
+    flags = {},
     ammo_type =
     {
       {
@@ -82,7 +82,7 @@ data:extend(
 		name = "uranium-artillery-shell",
 		icon = "__Advanced-Atomics__/graphics/icons/uranium-artillery-shell.png",
 		icon_size = 32,
-		flags = {"goes-to-main-inventory"},
+		flags = {},
 		ammo_type =
 		{
 		  category = "artillery-shell",
@@ -131,7 +131,7 @@ data:extend(
     name = "uranium-grenade",
     icon = "__Advanced-Atomics__/graphics/icons/uranium-grenade.png",
     icon_size = 32,
-    flags = {"goes-to-quickbar"},
+    flags = {},
     capsule_action =
     {
       type = "throw",
@@ -184,7 +184,7 @@ data:extend(
 		name = "uranium-shotgun-shell",
 		icon = "__Advanced-Atomics__/graphics/icons/uranium-shotgun-shell.png",
 		icon_size = 32,
-		flags = {"goes-to-main-inventory"},
+		flags = {},
 		ammo_type =
 		{
 		  category = "shotgun-shell",
@@ -250,7 +250,7 @@ data:extend(
 		name = "plutonium-artillery-shell",
 		icon = "__Advanced-Atomics__/graphics/icons/plutonium-artillery-shell.png",
 		icon_size = 32,
-		flags = {"goes-to-main-inventory"},
+		flags = {},
 		ammo_type =
 		{
 			category = "artillery-shell",
@@ -299,7 +299,7 @@ data:extend(
 		name = "plutonium-missile",
 		icon = "__Advanced-Atomics__/graphics/icons/plutonium-missile.png",
 		icon_size = 32,
-		flags = {"goes-to-main-inventory"},
+		flags = {},
 		ammo_type =
 		{
 		  range_modifier = 6,
@@ -348,7 +348,7 @@ data:extend(
 			name = "nukebot-capsule",
 			icon = "__Advanced-Atomics__/graphics/icons/nukebot.png",
 			icon_size = 32,
-			flags = {"goes-to-quickbar"},
+			flags = {},
 			capsule_action =
 			{
 				type = "throw",
@@ -402,7 +402,7 @@ data:extend(
 		name = "nade-artillery-shell",
 		icon = "__Advanced-Atomics__/graphics/icons/nade-artillery-shell.png",
 		icon_size = 32,
-		flags = {"goes-to-main-inventory"},
+		flags = {},
 		ammo_type =
 		{
 		  category = "artillery-shell",
