@@ -1,3 +1,14 @@
+for _, animation in ipairs(data.raw["character"]["character"]["animations"]) do
+  if animation.armors then
+    for _, armor in ipairs(animation.armors) do
+      if armor == "power-armor-mk2" then
+        animation.armors[#animation.armors + 1] = "plutonium-armor"
+        break
+      end
+    end
+  end
+end
+
 data:extend(
     {
   --- Plutonium Armor
@@ -6,7 +17,7 @@ data:extend(
     name = "plutonium-armor",
     icon = "__Advanced-Atomics__/graphics/icons/plutonium-armor.png",
     icon_size = 32,
-    flags = {"goes-to-main-inventory"},
+    flags = {},
     resistances =
     {
       {
@@ -57,13 +68,4 @@ data:extend(
 
 })
 
-for _, animation in ipairs(data.raw["player"]["player"]["animations"]) do
-  if animation.armors then
-    for _, armor in ipairs(animation.armors) do
-      if armor == "power-armor-mk2" then
-        animation.armors[#animation.armors + 1] = "plutonium-armor"
-        break
-      end
-    end
-  end
-end
+

@@ -15,14 +15,6 @@ data:extend({
 	},
 	{
 		type = "string-setting",
-		name = "AA_DistanceBonus",
-		setting_type = "startup",
-		default_value = "medium",
-		allowed_values = { "off", "low", "medium", "large"}, 
-        order = "a-c"
-	},
-	{
-		type = "string-setting",
 		name = "AA_TreeMapContrast",
 		setting_type = "startup",
 		default_value = "medium",
