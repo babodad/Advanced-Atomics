@@ -12,20 +12,6 @@ AA.ENABLED = {
 	["UraniumExtraction"] = settings.startup["AA_enable-UraniumExtraction"].value,
 }
 
--- Distance Bonus
-local distance_bonus = settings.startup["AA_DistanceBonus"].value
-
-
-if distance_bonus == "off" then
-	AA.DistFactor = 0
-elseif distance_bonus == "low" then
-	AA.DistFactor = 0.5
-elseif distance_bonus == "medium" then
-	AA.DistFactor = 1.0	
-elseif distance_bonus == "high" then
-	AA.DistFactor = 1.5
-end
-
 -- Custom Tree Map Color
 AA.TreeContrast = settings.startup["AA_TreeMapContrast"].value
 
@@ -43,7 +29,6 @@ end
 require ("prototypes.technology")
 
 ---- Items
-require("prototypes.atomic-tools")
 require("prototypes.uranium-armor")
 require("prototypes.plutonium")
 require("prototypes.plutonium-armor")

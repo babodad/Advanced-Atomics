@@ -7,7 +7,7 @@ data:extend(
   icon = "__Advanced-Atomics__/graphics/icons/uranium-shield.png",
   icon_size = 32,
   placed_as_equipment_result = "uranium-shield-equipment",
-  flags = {"goes-to-main-inventory"},
+  flags = {},
   subgroup = "equipment",
   order = "b[shield]-c[uranium-shield-equipment]",
   stack_size = 50,
@@ -68,7 +68,7 @@ data:extend(
     icon = "__Advanced-Atomics__/graphics/icons/plutonium-shield.png",
     icon_size = 32,
     placed_as_equipment_result = "plutonium-shield-equipment",
-    flags = {"goes-to-main-inventory"},
+    flags = {},
     subgroup = "equipment",
     order = "b[shield]-d[plutonium-shield-equipment]",
     stack_size = 50,
@@ -124,7 +124,7 @@ data:extend(
     icon = "__Advanced-Atomics__/graphics/icons/radionuclide-battery.png",
     icon_size = 32,
     placed_as_equipment_result = "radionuclide-battery-equipment",
-    flags = {"goes-to-main-inventory"},
+    flags = {},
     subgroup = "equipment",
     order = "c[battery]-c[radionuclide-battery]",
     stack_size = 50,
@@ -137,8 +137,8 @@ data:extend(
     sprite =
     {
       filename = "__Advanced-Atomics__/graphics/equipment/radionuclide-battery-equipment.png",
-      width = 64,
-      height = 96,
+      width = 32,
+      height = 64,
       priority = "medium"
     },
     shape =
@@ -153,7 +153,7 @@ data:extend(
       buffer_capacity = "750MJ",
       input_flow_limit = "4GW",
       output_flow_limit = "4GW",
-      usage_priority = "terciary"
+      usage_priority = "tertiary"
     },
     categories = {"armor"}
   },

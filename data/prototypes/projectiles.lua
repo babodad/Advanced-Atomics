@@ -78,43 +78,39 @@ data:extend(
       }
     },
 
-    spine_animation =
+	spine_animation = util.draw_as_glow
     {
-      filename = "__Advanced-Atomics__/graphics/entity/flamethrower-fire-stream/uranium-flamethrower-fire-stream-spine.png",
-      blend_mode = "additive",
-      line_length = 4,
-      width = 32,
-      height = 18,
-      frame_count = 32,
-      axially_symmetrical = false,
-      direction_count = 1,
-      animation_speed = 2,
-      scale = 0.75,
-      shift = {0, 0},
-    },
-
-    shadow =
-    {
-      filename = "__base__/graphics/entity/acid-projectile-purple/acid-projectile-purple-shadow.png",
-      line_length = 5,
-      width = 28,
-      height = 16,
-      frame_count = 33,
-      priority = "high",
-      scale = 0.5,
-      shift = {-0.09 * 0.5, 0.395 * 0.5}
-    },
-
-    particle =
-    {
-      filename = "__Advanced-Atomics__/graphics/entity/flamethrower-fire-stream/uranium-flamethrower-explosion.png",
-      priority = "extra-high",
-      width = 64,
-      height = 64,
-      frame_count = 32,
-      line_length = 8,
-      scale = 0.8,
-    },
+		filename = "__Advanced-Atomics__/graphics/entity/flamethrower-fire-stream/uranium-flamethrower-fire-stream-spine.png",
+		blend_mode = "additive",
+		--tint = {r=1, g=1, b=1, a=0.5},
+		line_length = 4,
+		width = 32,
+		height = 18,
+		frame_count = 32,
+		axially_symmetrical = false,
+		direction_count = 1,
+		animation_speed = 2,
+		shift = {0, 0}
+    },	
+	shadow =
+	{
+		filename = "__base__/graphics/entity/acid-projectile/projectile-shadow.png",
+		line_length = 5,
+		width = 28,
+		height = 16,
+		frame_count = 33,
+		priority = "high",
+		shift = {-0.09, 0.395}
+	},
+	particle = util.draw_as_glow
+	{
+		filename = "__Advanced-Atomics__/graphics/entity/flamethrower-fire-stream/uranium-flamethrower-explosion.png",
+		priority = "extra-high",
+		width = 64,
+		height = 64,
+		frame_count = 32,
+		line_length = 8 
+	}
 	},
 
 	{
@@ -173,44 +169,40 @@ data:extend(
         }
       }
     },
-
-    spine_animation =
+	spine_animation = util.draw_as_glow
     {
-      filename = "__Advanced-Atomics__/graphics/entity/flamethrower-fire-stream/uranium-flamethrower-fire-stream-spine.png",
-      blend_mode = "additive",
-      line_length = 4,
-      width = 32,
-      height = 18,
-      frame_count = 32,
-      axially_symmetrical = false,
-      direction_count = 1,
-      animation_speed = 2,
-      scale = 1.40625,
-      shift = {0, 0},
-    },
-
-    shadow =
-    {
-      filename = "__base__/graphics/entity/acid-projectile-purple/acid-projectile-purple-shadow.png",
-      line_length = 5,
-      width = 28,
-      height = 16,
-      frame_count = 33,
-      priority = "high",
-      scale = 0.9375,
-      shift = {-0.09 * 0.5, 0.395 * 0.5}
-    },
-
-    particle =
-    {
-      filename = "__Advanced-Atomics__/graphics/entity/flamethrower-fire-stream/uranium-flamethrower-explosion.png",
-      priority = "extra-high",
-      width = 64,
-      height = 64,
-      frame_count = 32,
-      line_length = 8,
-      scale = 1.5,
-    },
+		filename = "__Advanced-Atomics__/graphics/entity/flamethrower-fire-stream/uranium-flamethrower-fire-stream-spine.png",
+		blend_mode = "additive",
+		--tint = {r=1, g=1, b=1, a=0.5},
+		line_length = 4,
+		width = 32,
+		height = 18,
+		frame_count = 32,
+		axially_symmetrical = false,
+		direction_count = 1,
+		animation_speed = 2,
+		shift = {0, 0}
+    },	
+	shadow =
+	{
+		filename = "__base__/graphics/entity/acid-projectile/projectile-shadow.png",
+		line_length = 5,
+		width = 28,
+		height = 16,
+		frame_count = 33,
+		priority = "high",
+		shift = {-0.09, 0.395}
+	},
+	particle = util.draw_as_glow
+	{
+		filename = "__Advanced-Atomics__/graphics/entity/flamethrower-fire-stream/uranium-flamethrower-explosion.png",
+		priority = "extra-high",
+		width = 64,
+		height = 64,
+		frame_count = 32,
+		line_length = 8 
+	}
+	
   },
 
 	--- Uranium Shells
