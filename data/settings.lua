@@ -10,7 +10,7 @@ data:extend({
         type = "bool-setting",
 		name = "AA_enable-UraniumExtraction",
 		setting_type = "startup",
-		default_value = false,
+		default_value = true,
 		order = "a-bc"
 	},
 	{

@@ -22,31 +22,33 @@ data:extend(
     {
       {
         type = "physical",
-        decrease = 30,
-        percent = 60
+        decrease = 50,
+        percent = 50
       },
       {
         type = "acid",
         decrease = 30,
-        percent = 60
+        percent = 40
       },
       {
         type = "explosion",
-        decrease = 80,
-        percent = 60
+        decrease = 42,
+        percent = 80
       },
       {
         type = "fire",
         decrease = 0,
         percent = 100
       }
-    },
-    durability = 40000,
+    },  
     subgroup = "armor",
     order = "g[plutonium-armor]",
     stack_size = 1,
+    infinite = true,
     equipment_grid = "largest-equipment-grid",
-    inventory_size_bonus = 60
+    inventory_size_bonus = 60,
+    open_sound = {filename =  "__base__/sound/armor-open.ogg", volume = 1},
+    close_sound = {filename = "__base__/sound/armor-close.ogg", volume = 1}
   },
   
   {

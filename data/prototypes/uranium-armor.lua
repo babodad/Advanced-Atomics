@@ -31,37 +31,38 @@ data:extend(
     name = "uranium-armor",
     icon = "__Advanced-Atomics__/graphics/icons/uranium-armor.png",
     tint = {r=0, g=1, b=0, a=0.5},  
-    icon_size = 32,
-    flags = {},
+    icon_size = 32,  
     resistances =
     {
       {
         type = "physical",
-        decrease = 20,
-        percent = 60
+        decrease = 40,
+        percent = 40
       },
       {
         type = "acid",
         decrease = 20,
-        percent = 60
+        percent = 30
       },
       {
         type = "explosion",
-        decrease = 70,
-        percent = 60
+        decrease = 42,
+        percent = 70
       },
       {
         type = "fire",
-        decrease = 0,
-        percent = 90
+        decrease = 10,
+        percent = 80
       }
     },
-    durability = 30000,
     subgroup = "armor",
     order = "f[uranium-armor]",
     stack_size = 1,
+    infinite = true,
     equipment_grid = "larger-equipment-grid",
-    inventory_size_bonus = 50
+    inventory_size_bonus = 50,
+    open_sound = {filename =  "__base__/sound/armor-open.ogg", volume = 1},
+    close_sound = {filename = "__base__/sound/armor-close.ogg", volume = 1}
   },
   
   {
@@ -75,6 +76,8 @@ data:extend(
       {"speed-module-3", 20},
       {"advanced-circuit", 80},
       {"processing-unit", 120},
+      {"electric-engine-unit", 60},
+      {"low-density-structure", 42},
       {"uranium-235", 42}
     },
     result = "uranium-armor",

@@ -18,14 +18,14 @@ data:extend(
 		},
 		prerequisites = {"nuclear-power", "power-armor-mk2", "military-4"},
 		unit = {
-			count = 500,
+			count = 1000,
 			ingredients = 
 			{
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1},
-				{"chemical-science-pack", 2},
-				{"military-science-pack", 2},
-				{"utility-science-pack", 2}
+				{"chemical-science-pack", 1},
+				{"military-science-pack", 1},
+				{"utility-science-pack", 1}
 			},
 			time = 42			
 		},
@@ -41,31 +41,12 @@ data:extend(
 		name = "plutonium",
 		icon_size = 128,
 		icon = "__Advanced-Atomics__/graphics/technology/plutonium_128.png",
-		effects = {
+		effects = 
+		{
 			{
 				type = "unlock-recipe",
 				recipe = "plutonium-nucleosynthesis"
-			},			
-			{
-				type = "unlock-recipe",
-				recipe = "plutonium-armor"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "plutonium-shield-equipment"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "radionuclide-battery-equipment"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "plutonium-artillery-shell"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "plutonium-missile"
-			},
+			},	
 			{
 				type = "unlock-recipe",
 				recipe = "mox-fuel-cell"
@@ -75,28 +56,30 @@ data:extend(
 				recipe = "plutonium-fuel"
 			},
 		},
-		-- prerequisites = {"kovarex-enrichment-process"},
-		unit = {
-			count = 2000,
-			ingredients = 
+		prerequisites = {"kovarex-enrichment-process"},
+		unit =
+		{
+			count = 5000,			
+			ingredients =
 			{
-				{"automation-science-pack", 1},
-				{"logistic-science-pack", 1},
-				{"chemical-science-pack", 2},
-				{"military-science-pack", 2},
-				{"utility-science-pack", 3}
+			  {"automation-science-pack", 1},
+			  {"logistic-science-pack", 1},
+			  {"chemical-science-pack", 1},
+			  {"military-science-pack", 1},
+			  {"production-science-pack", 1},
+			  {"utility-science-pack", 1}
 			},
 			time = 42			
 		},
 		order = "e-p-b-e"
 	},	
 
---[[ 	---Plutonium warfare
+---Plutonium warfare
 	{
 		type = "technology",
 		name = "plutonium-warfare",
-		icon_size = 128,
-		icon = "__Advanced-Atomics__/graphics/technology/plutonium-warfare_128.png",
+		icon_size = 256, icon_mipmaps = 4,
+		icon = "__Advanced-Atomics__/graphics/technology/plutonium-warfare.png",
 		effects = {		
 			{
 				type = "unlock-recipe",
@@ -121,19 +104,20 @@ data:extend(
 		},
 		prerequisites = {"plutonium", "artillery"},
 		unit = {
-			count = 1000,
-			ingredients = 
+			count = 6000,
+			ingredients =
 			{
-				{"automation-science-pack", 1},
-				{"logistic-science-pack", 1},
-				{"chemical-science-pack", 1},
-				{"military-science-pack", 2},
-				{"utility-science-pack", 2}
-			},
+			  {"automation-science-pack", 1},
+			  {"logistic-science-pack", 1},
+			  {"chemical-science-pack", 1},
+			  {"military-science-pack", 1},
+			  {"production-science-pack", 1},
+			  {"utility-science-pack", 1}
+			},			
 			time = 42			
 		},
 		order = "e-p-b-f"
-	}, ]]
+	} 
 })
 
 table.insert(data.raw["technology"]["uranium-ammo"].effects,
@@ -199,15 +183,15 @@ if AA.ENABLED["UraniumExtraction"] then
 					recipe = "uranium-concrete"
 				}
 			},
-			prerequisites = {"nuclear-power", "coal-liquefaction"},
+			prerequisites = {"nuclear-power", "kovarex-enrichment-process"},
 			unit = {
-				count = 400,
+				count = 2000,
 				ingredients =
 				{
 					{"automation-science-pack", 1},
 					{"logistic-science-pack", 1},
-					{"chemical-science-pack", 2},
-					{"production-science-pack", 3}
+					{"chemical-science-pack", 1},
+					{"production-science-pack", 1}
 				},
 				time = 42
 			},
@@ -220,9 +204,9 @@ if AA.ENABLED["SSP4Plutonium"] then
 	data.raw["technology"]["plutonium"].unit.ingredients = {
 		{"automation-science-pack", 1},
 		{"logistic-science-pack", 1},
-		{"chemical-science-pack", 2},
-		{"military-science-pack", 2},
-		{"utility-science-pack", 2},
-		{"space-science-pack", 3}
+		{"chemical-science-pack", 1},
+		{"military-science-pack", 1},
+		{"utility-science-pack", 1},
+		{"space-science-pack", 1}
 	}
 end

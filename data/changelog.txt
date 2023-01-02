@@ -1,18 +1,28 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.1
+Date: 2023-01-02
+  Features:
+    - Added new technology "Plutonium Warfare" for all plutonium based weapons
+  Graphics:
+    - New AdvancedAtomics Logo and new technology icons
+  Balancing:
+    - Uranium and Power Armor resistances changed - They are now more specialized against fire and explosives but weak against acid
+    - Changed all research costs and some technology requirements for better balancing with Factorio 1.1 Vanilla and Space Exploration Mod
+---------------------------------------------------------------------------------------------------
 Version: 0.2.0
-Date: 23. 12. 2022
-  compatability with Factorio v.1.1
-
+Date: 2022-12-23
+  Info:
+    - Finally compatible with Factorio v.1.1
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.8
-Date: 13. 04. 2018
+Date: 2018-04-13
   Balancing:
     - Uranium Concrete requires Uranium Extraction instead of Uranium Ammo technology
   Bugfixes:
     - New recipes are now properly unlocked if required tech is already researched.
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.7
-Date: 12. 04. 2018        
+Date: 2018-04-12
   Features:
     - Added U-Wing aka nukebot
     - Added uranium concrete
@@ -24,7 +34,7 @@ Date: 12. 04. 2018
     - Fixed missing locale for gui element reach distance  
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.6
-Date: 03. 02. 2018        
+Date: 2018-02-03
   Features:
     - Added uranium flamethrower ammunition
     - New settings option: Custom distance bonus for pickaxes 
@@ -33,7 +43,7 @@ Date: 03. 02. 2018
     - Reduced distance bonus for pickaxes
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.5
-Date: 28. 01. 2018        
+Date: 2018-01-28
   Features:
     - Added plutonium fuel for enhanced top speed and acceleration
     - Added mox fuel cells with higher energy density than uranium fuel cells
@@ -42,7 +52,7 @@ Date: 28. 01. 2018
     - Added compatability with mods that remove "kovarex enrichment process" (e.g. SigmaOne's Mods: Nuclear)
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.4
-Date: 23. 01. 2018        
+Date: 2018-01-23
   Graphics:
     - New explosion effects added for Uranium Grenade and Uranium Artillery Shells
     - Added more glow to Plutonium-239 item
@@ -57,13 +67,13 @@ Date: 23. 01. 2018
     - Added missing setting description in localization
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.3
-Date: 22. 01. 2018
+Date: 2018-01-22
   Features:
     - Uranium Extraction Process to yield uranium ore with sulfuric acid from copper iron or water (optional setting)
     - Added Uranium Grenades
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.2
-Date: 21. 01. 2018
+Date: 2018-01-21
   Features:
     - Added Uranium Shotgun Shells
     - Added Plutonium Missiles (enhanced atomic bomb made of Plutonium-239)
@@ -72,12 +82,12 @@ Date: 21. 01. 2018
     - Changed recipe of Plutonium Nucleosynthesis (based on Kovarex Enrichment Process with probability of process failure)
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.1
-Date: 20. 01. 2018
+Date: 2018-01-20
   Bugfixes:
     - Changed zip compression to work on headless unix servers
     - Fixed some typos in localization 
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.0
-Date: 19. 01. 2018
+Date: 2018-01-19
   Features:
-    - Initial release 
+    - Initial release
